@@ -1,0 +1,8 @@
+@import "../flex-builder-base";
+//
+// Prefix one
+//
+
+.onecol-prefix-1  {
+  @include prefix(1 of 12);
+}

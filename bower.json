@@ -1,0 +1,22 @@
+{
+  "name": "atd8",
+  "description": "Bower dependencies for ATD8 sub-themes",
+  "authors": [
+    "jmburnz <jeff@adaptivethemes.com>"
+  ],
+  "license": "GPL 2.0",
+  "homepage": "https://www.drupal.org/project/adaptivetheme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.12",
+    "modular-scale": "~2.1.1",
+    "compass-vertical-rhythm-mixins": "jmburnz/compass-vertical-rhythm-mixins"
+  }
+}

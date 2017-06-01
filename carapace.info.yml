@@ -1,0 +1,46 @@
+name: Carapace
+version: 8.x-2.0
+type: theme
+'base theme': at_core
+'base theme original': 8.x-2.0
+'subtheme type': adaptive_subtheme
+layout: flex-builder
+description: 'A theme designed to enhance the user experience for Islandora CLAW. <br>Base: at_core (8.x-2.0) <br>Generated: Wed 31st, May, 2017 - 17:31'
+core: 8.x
+regions:
+  leaderboard: Leaderboard
+  header_first: 'Header first'
+  header_second: 'Header second'
+  navbar: Navbar
+  highlighted: Highlighted
+  features_first: 'Features first'
+  features_second: 'Features second'
+  features_third: 'Features third'
+  content_prefix: 'Content prefix'
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  content_suffix: 'Content suffix'
+  subfeatures_first: 'Sub-features first'
+  subfeatures_second: 'Sub-features second'
+  subfeatures_third: 'Sub-features third'
+  subfeatures_fourth: 'Sub-features fourth'
+  footer: Footer
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+tags: 'adaptivetheme sub-theme'
+libraries-extend:
+  quickedit/quickedit:
+    - carapace/quickedit
+stylesheets-remove:
+  - '@stable/css/node/node.preview.css'
+  - '@stable/css/node/node.module.css'
+  - '@stable/css/views/views.module.css'
+  - '@stable/css/system/components/tablesort.module.css'
+  - '@classy/css/components/file.css'
+features:
+  - logo
+  - favicon
+  - node_user_picture
+  - comment_user_picture
+  - comment_user_verification

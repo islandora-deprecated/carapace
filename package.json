@@ -1,0 +1,35 @@
+{
+  "name": "at_subtheme",
+  "version": "8.0.0",
+  "description": "Theme starterkit for Adaptivetheme and Drupal 8",
+  "author": "Jeff Burnz",
+  "email": "jmburnz@gmail.com",
+  "private": true,
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-sass": "2.0.0",
+    "grunt-sass-globbing": "1.5.1",
+    "grunt-contrib-watch": "1.0.0",
+    "autoprefixer": "6.5.4",
+    "grunt-postcss": "0.8.0",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-csslint": "2.0.0"
+  },
+  "engines": {
+    "node": "4.4.7",
+    "npm": "2.15.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://cgit.drupalcode.org/at_tools/"
+  },
+  "bugs": {
+    "url": "https://www.drupal.org/project/issues/at_tools"
+  },
+  "keywords": [
+    "drupal",
+    "theme",
+    "adaptivetheme"
+  ],
+  "license": "GPL-2.0"
+}
