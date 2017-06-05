@@ -7,8 +7,8 @@ Before installing this theme, please make sure you have downloaded the AdaptiveT
 
 AdaptiveTheme sub-themes also require two modules to work correctly. Please download and enable the following two projects in your /modules folder:
 
-https://www.drupal.org/project/layout_plugin
-https://www.drupal.org/project/at_tools
+- https://www.drupal.org/project/layout_plugin
+- https://www.drupal.org/project/at_tools
 
 Once you have downloaded and extracted the AdaptiveTheme framework and enabled the associated modules, create a /custom folder inside your /themes folder if it doesn't already exist (not necessary but highly recommended). Move to the newly created custom folder and clone this repository inside. Alternatively, you can also download the compressed repository and extract in the custom folder. Once you have the files in the appropriate directory you should see the Carapace for Islandora theme in the appearance tab. Click the 'Install and set as default' link and you should be ready to go.
 
