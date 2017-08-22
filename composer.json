@@ -1,0 +1,41 @@
+{
+  "name": "islandora/carapace",
+  "description": "An AdaptiveTheme sub-theme customized to optimize the Islandora experience",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Islandora"],
+  "homepage": "https://github.com/islandora-claw/Carapace",
+  "support": {
+    "issues": "https://github.com/islandora-claw/CLAW/issues",
+    "irc": "irc://irc.freenode.net/islandora"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "drupal/adaptivetheme": "^2.0",
+    "drupal/at_tools": "^2.0",
+    "drupal/layout_plugin": "^1.0@alpha"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8",
+    "squizlabs/php_codesniffer": "2.7.1",
+    "drupal/coder": "*",
+    "sebastian/phpcpd": "*"
+  },
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Islandora Foundation",
+      "email": "community@islandora.ca",
+      "role": "Owner"
+    },
+    {
+      "name": "Favenzio Calvo",
+      "email": "fcalvo@fsu.edu",
+      "role": "Author"
+    }
+  ]
+}
