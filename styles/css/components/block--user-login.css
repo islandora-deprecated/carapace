@@ -20,7 +20,8 @@
   margin: 0.625rem 0 1rem;
 }
 
-.is-horizontal-login-block .block__inner:before, .is-horizontal-login-block .block__inner:after {
+.is-horizontal-login-block .block__inner:before,
+.is-horizontal-login-block .block__inner:after {
   content: " ";
   display: table;
 }

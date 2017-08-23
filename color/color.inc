@@ -1,11 +1,14 @@
 <?php
+
 /**
  * @file
- * Lists available colors and color schemes for the AT Starterkit. By default
- * the color scheme relies almost entirely on color shift, where the user
- * changes the base color and all other unspecified colors shift relative to
- * the new base.
+ * Lists available colors and color schemes for the AT Starterkit.
+ *
+ * By default the color scheme relies almost entirely on color shift, where the
+ * user changes the base color and all other unspecified colors shift relative
+ * to the new base.
  */
+
 $info = [
   // Available colors and color labels used in theme.
   'fields' => [
@@ -19,8 +22,10 @@ $info = [
       'title' => t('Carbon Neutral'),
       'colors' => [
         'base' => '#000000',
-        'text' => '#555555', // $text-color
-        'link' => '#0066cc', // $link-color
+  // $text-color.
+        'text' => '#555555',
+  // $link-color.
+        'link' => '#0066cc',
       ],
     ],
     'goodearth' => [

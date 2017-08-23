@@ -3,36 +3,36 @@
 .fourcol-inset-left .hr--1-4 .l-r,
 .fourcol-inset-left .hr--3-4 .l-r {
   -ms-flex-preferred-size: 50%;
-          -webkit-flex-basis: 50%;
-          flex-basis: 50%;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .fourcol-inset-left .hr--2-3 .l-r:first-child,
 .fourcol-inset-left .hr--2-4 .l-r:first-child {
   -ms-flex-preferred-size: 75%;
-          -webkit-flex-basis: 75%;
-          flex-basis: 75%;
+  -webkit-flex-basis: 75%;
+  flex-basis: 75%;
 }
 
 .fourcol-inset-left .hr--2-3 .l-r:last-child,
 .fourcol-inset-left .hr--2-4 .l-r:last-child {
   -ms-flex-preferred-size: 25%;
-          -webkit-flex-basis: 25%;
-          flex-basis: 25%;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
 }
 
 .fourcol-inset-left .hr--1-2-3,
 .fourcol-inset-left .hr--1-2-4 {
   -ms-flex-pack: end;
-      -webkit-justify-content: flex-end;
-          justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .fourcol-inset-left .hr--1-2-3 .l-r,
 .fourcol-inset-left .hr--1-2-4 .l-r {
   -ms-flex-preferred-size: 50%;
-          -webkit-flex-basis: 50%;
-          flex-basis: 50%;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .fourcol-inset-left .hr--1-2-4 .l-r:first-child,

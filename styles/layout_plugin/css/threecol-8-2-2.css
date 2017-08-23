@@ -4,20 +4,20 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .atl__lc {
   -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   padding: 0 0.625em;
   width: 100%;
 }
@@ -32,7 +32,8 @@
   width: 33.33333%;
 }
 
-.bp--at-core-simple-tablet .atl--threecol-8-2-2.l-arc--3 > .atl__cw > .atl__lc:nth-child(2), .bp--at-core-simple-tablet .atl--threecol-8-2-2.l-arc--3 > .atl__cw > .atl__lc:last-child {
+.bp--at-core-simple-tablet .atl--threecol-8-2-2.l-arc--3 > .atl__cw > .atl__lc:nth-child(2),
+.bp--at-core-simple-tablet .atl--threecol-8-2-2.l-arc--3 > .atl__cw > .atl__lc:last-child {
   width: 50%;
 }
 

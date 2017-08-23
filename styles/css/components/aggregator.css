@@ -11,7 +11,8 @@
   border-radius: 2px;
 }
 
-.aggregator-item:before, .aggregator-item:after {
+.aggregator-item:before,
+.aggregator-item:after {
   content: " ";
   display: table;
 }
