@@ -12,8 +12,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .ms-horizontal .rm-block__content .menu .menu__item {
@@ -39,7 +39,8 @@
   padding: 0.5rem 1.25rem;
 }
 
-.ms-horizontal .rm-block__content a:before, .ms-horizontal .rm-block__content a:after {
+.ms-horizontal .rm-block__content a:before,
+.ms-horizontal .rm-block__content a:after {
   content: "";
   float: none;
   width: 0;

@@ -1,7 +1,7 @@
 .threecol-row-reverse-2-2-8 .l-rw {
   -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .threecol-row-reverse-2-2-8 .hr--1-2 .l-r:last-child,
