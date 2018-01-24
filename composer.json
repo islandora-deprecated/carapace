@@ -1,7 +1,7 @@
 {
   "name": "islandora/carapace",
   "description": "An AdaptiveTheme sub-theme customized to optimize the Islandora experience",
-  "type": "drupal-module",
+  "type": "drupal-theme",
   "keywords": ["Drupal", "Islandora"],
   "homepage": "https://github.com/islandora-claw/Carapace",
   "support": {
