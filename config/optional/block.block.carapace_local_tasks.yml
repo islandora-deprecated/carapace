@@ -6,7 +6,7 @@ dependencies:
 id: carapace_local_tasks
 theme: carapace
 region: content
-weight: 1
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

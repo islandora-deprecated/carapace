@@ -15,10 +15,10 @@
 
       &.menu__item > a:after {
         content: $bullet-closed; // LTR
-      }
 
-      &.menu__item--expanded > a:after {
-        content: $bullet-open ;
+        &.--expanded > a:after {
+          content: $bullet-open ;
+        }
       }
     }
 

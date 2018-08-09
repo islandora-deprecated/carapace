@@ -6,7 +6,7 @@ dependencies:
 id: carapace_local_actions
 theme: carapace
 region: content
-weight: 3
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

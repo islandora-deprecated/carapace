@@ -8,8 +8,7 @@
   text-align: center;
 }
 
-.pager ul,
-.pager ol {
+.pager ul, .pager ol {
   margin: 0;
   padding: 0;
 }
@@ -20,6 +19,7 @@
 
 .pager--mini .pager__link--is-active {
   font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 .pager__items {
@@ -32,7 +32,7 @@
   display: inline-block;
 }
 
-@media screen and (max-width: 45em) {
+@media all and (max-width: 60em) {
   .pager__items__first-previous,
   .pager__items__num-pages,
   .pager__items__next-last {
@@ -44,41 +44,34 @@
   }
 }
 
-@media screen and (min-width: 45.0625em) {
-  .pager__items {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
+@media all and (min-width: 60.063em) {
   .pager__items__first-previous,
   .pager__items__num-pages,
   .pager__items__next-last {
     display: inline-block;
   }
+  .pager__items__num-pages {
+    text-align: center;
+  }
   .pager__items__first-previous {
-    text-align: left;
+    float: left;
   }
   .pager__items__next-last {
-    text-align: right;
+    float: right;
   }
 }
 
 .pager__link {
   display: inline-block;
-  border-radius: 2px;
-  transition: all, 225ms, ease-in-out;
+  border-radius: 0;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
   padding: 0.125rem 0.4375rem 0;
   border: 0;
 }
 
-.pager__link:focus,
-.pager__link:hover {
+.pager__link:focus, .pager__link:hover {
   text-decoration: none;
 }
 /*# sourceMappingURL=pagers.css.map */

@@ -7,14 +7,12 @@
 .messages {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  padding: 1.25em;
-  margin: 1.25em 0;
+
+  @include output-rhythm(padding, $medium);
+  @include output-rhythm(margin, $x-large 0);
 
   border: $border-width $border-style;
   border-radius: $border-radius;
-
-  // YAML Forms module adds a box-shadow that don't jive with our styles.
-  box-shadow: none;
 
   &+ .messages {
     margin-top: $large;

@@ -151,7 +151,7 @@ div.sf-accordion-toggle.sf-style-none {
   > a:after {
     content: "≡";
     position: absolute;
-    @include output-rhythm(font-size, $xx-large);
+    @include adjust-font-size-to($xx-large);
     @include output-rhythm(right, $small);
     top: 42%;
     -webkit-transform: translateY(-50%);

@@ -12,21 +12,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     sass_globbing: {
-      layout_site_builder_form: {
+      page_layout_form: {
         files: {
-          'layout/site-builder/sass/site-builder-form.scss': [
-            'layout/site-builder/sass/**/*.scss',
-            'layout/site-builder/sass/_site-builder-form-global.scss',
-            '!layout/site-builder/sass/site-builder-global.scss'
-          ]
-        }
-      },
-      layout_flex_builder_form: {
-        files: {
-          'layout/flex-builder/sass/flex-builder-form.scss': [
-            'layout/flex-builder/sass/**/*.scss',
-            'layout/flex-builder/sass/_flex-builder-form-global.scss',
-            '!layout/flex-builder/sass/flex-builder-global.scss'
+          'layout/page-layout/sass/page-layout-form.scss': [
+            'layout/page-layout/sass/**/*.scss',
+            'layout/page-layout/sass/_page-layout-form-global.scss',
+            '!layout/page-layout/sass/page-layout-global.scss'
           ]
         }
       }
@@ -36,7 +27,7 @@ module.exports = function(grunt) {
       uikit: {
         files: [{
           expand: true,
-          cwd: 'styles/uikit/components',
+          cwd: 'styles/uikit/components/stylesheets',
           src: ['*.scss'],
           dest: 'styles/css/components',
           ext: '.css'
@@ -49,12 +40,12 @@ module.exports = function(grunt) {
           sourceMap: true
         }
       },
-      layout_site_builder: {
+      page_layout: {
         files: [{
           expand: true,
-          cwd: 'layout/site-builder/sass',
+          cwd: 'layout/page-layout/sass',
           src: ['**/*.scss'],
-          dest: 'layout/site-builder/css',
+          dest: 'layout/page-layout/css',
           ext: '.css'
         }],
         options: {
@@ -63,26 +54,12 @@ module.exports = function(grunt) {
           outputStyle: 'expanded'
         }
       },
-      layout_flex_builder: {
+      plugin_layout: {
         files: [{
           expand: true,
-          cwd: 'layout/flex-builder/sass',
-          src: ['**/*.scss'],
-          dest: 'layout/flex-builder/css',
-          ext: '.css'
-        }],
-        options: {
-          require: 'susy',
-          precision: 5,
-          outputStyle: 'expanded'
-        }
-      },
-      layout_plugin: {
-        files: [{
-          expand: true,
-          cwd: 'styles/layout_plugin/sass',
+          cwd: 'layout/plugin-layout/sass',
           src: ['*.scss'],
-          dest: 'styles/layout_plugin/css',
+          dest: 'layout/plugin-layout/css',
           ext: '.css'
         }],
         options: {
@@ -106,16 +83,16 @@ module.exports = function(grunt) {
           ]
         }
       },
-      layout_flex_builder: {
-        src: 'layout/flex-builder/css/*/**.css',
+      page_layout: {
+        src: 'layout/page-layout/css/*/**.css',
         options: {
           processors: [
             require('autoprefixer')({browsers: 'last 5 versions'})
           ]
         }
       },
-      layout_plugin: {
-        src: 'styles/layout_plugin/css/**.css',
+      plugin_layout: {
+        src: 'layout/plugin-layout/css/**.css',
         options: {
           processors: [
             require('autoprefixer')({browsers: 'last 5 versions'})
@@ -144,17 +121,13 @@ module.exports = function(grunt) {
         //  livereload: 35729
         }
       },
-      layout_site_builder: {
-        files: 'layout/site-builder/sass/**/*.scss',
-        tasks: ['sass_globbing:layout_site_builder_form', 'sass:layout_site_builder']
+      page_layout: {
+        files: 'layout/page-layout/sass/**/*.scss',
+        tasks: ['sass_globbing:page_layout_form', 'sass:page_layout']
       },
-      layout_flex_builder: {
-        files: 'layout/flex-builder/sass/**/*.scss',
-        tasks: ['sass_globbing:layout_flex_builder_form', 'sass:layout_flex_builder', 'postcss:layout_flex_builder']
-      },
-      layout_plugin: {
-        files: 'styles/layout_plugin/sass/**/*.scss',
-        tasks: ['sass:layout_plugin', 'postcss:layout_plugin']
+      plugin_layout: {
+        files: 'layout/plugin-layout/sass/**/*.scss',
+        tasks: ['sass:plugin_layout', 'postcss:plugin_layout']
       }
 
 		}

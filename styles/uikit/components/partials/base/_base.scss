@@ -1,22 +1,32 @@
+// // Import base requirements.
+//
+// // Import the layout base so we ensure $flow variables are identical.
+// // See: layout/site-builder/assets/sass/_site-builder-base.scss
+// @import "../../../../../layout/flex-builder/sass/flex-builder-base";
+//
+// // Modular Scale.
+// @import "../../../../../bower_components/modular-scale/stylesheets/modular-scale";
+//
+// // UI Kit Variables.
+// @import
+//   "../../font-awesome/mixins",
+//   "../../font-awesome/variables",
+//   "../media-queries",
+//   "../variables";
+//
+// // Compass - compass-vertical-rhythm-mixins only, must come after ../variables
+// @import "../../../../../bower_components/compass-vertical-rhythm-mixins/compass-vertical-rhythm-mixins";
+//
+// // UI Kit Mixins.
+// @import "../../mixins/mixins";
+
 // Import base requirements.
 
-// Import the layout base so we ensure $flow variables are identical.
-// See: layout/site-builder/assets/sass/_site-builder-base.scss
-@import "../../../../../layout/flex-builder/sass/flex-builder-base";
-
-// Modular Scale.
-@import "../../../../../bower_components/modular-scale/stylesheets/modular-scale";
-
-// UI Kit Variables.
 @import
+  "../../../../../layout/page-layout/sass/page-layout-base",
+  "../../../../../node_modules/modularscale-sass/stylesheets/modularscale",
   "../../font-awesome/mixins",
   "../../font-awesome/variables",
   "../media-queries",
-  "../variables";
-
-// Compass - compass-vertical-rhythm-mixins only, must come after ../variables
-@import "../../../../../bower_components/compass-vertical-rhythm-mixins/compass-vertical-rhythm-mixins";
-
-// UI Kit Mixins.
-@import "../../mixins/mixins";
-
+  "../variables",
+  "../../mixins/mixins";

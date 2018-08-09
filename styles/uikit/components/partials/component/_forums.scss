@@ -108,7 +108,7 @@
 .forum-list__description {
   @include cf;
 
-  @include output-rhythm(font-size, $medium / 1.25); // 13px
+  @include adjust-font-size-to($medium / 1.25); // 13px
   @include output-rhythm(margin, $xx-small $xx-small $xx-small 33px); // LTR, force the desc text to align with the forum name.
 
   // RTL
@@ -140,7 +140,7 @@
 
   a {}
   .submitted {
-    @include output-rhythm(font-size, $medium * .875); // 14px
+    @include adjust-font-size-to($medium * .875); // 14px
   }
 }
 

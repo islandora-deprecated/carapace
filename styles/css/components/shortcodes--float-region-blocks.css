@@ -1,7 +1,7 @@
 /**
  * Shortcodes (Float region blocks)
  ============================================================================ */
-@media screen and (min-width: 60.0625em) {
+@media all and (min-width: 60.063em) {
   [class*="frb-"] .block {
     margin-right: 2%;
     float: left;

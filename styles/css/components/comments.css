@@ -4,30 +4,17 @@
  *  - styles for comments
  ============================================================================ */
 .comment {
-  padding: 1rem 0;
+  padding-top: 1rem;
   border-top: 1px solid;
 }
 
-.comment__title--visually-hidden {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
+.comment:before, .comment:after {
+  content: " ";
+  display: table;
 }
 
-.comment__title--visually-hidden .permalink {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  word-wrap: normal;
-  font: 0/0 a;
-}
-
-.comment__title--visually-hidden .marker {
-  float: right;
-  margin-left: 0.25rem;
+.comment:after {
+  clear: both;
 }
 
 .comment p:last-of-type {
@@ -35,13 +22,8 @@
 }
 
 .comment__meta {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
+  overflow: hidden;
 }
 
 .comment.has-title .comment__meta {
@@ -63,7 +45,7 @@
   display: block;
 }
 
-@media screen and (max-width: 60em) {
+@media all and (max-width: 60em) {
   .comment__meta .comment__author:after {
     display: none;
   }
@@ -107,8 +89,7 @@
   clear: both;
 }
 
-.field-type-comment:before,
-.field-type-comment:after {
+.field-type-comment:before, .field-type-comment:after {
   content: " ";
   display: table;
 }

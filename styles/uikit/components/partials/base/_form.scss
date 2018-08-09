@@ -184,43 +184,6 @@ details {
     transition: all 650ms ease-in-out;
   }
 
-  > summary {
-    &:before {
-      font-family: $icon-font;
-      float: left;
-      margin: -1px 0 0;
-      @include output-rhythm(height, $medium);
-      @include output-rhythm(width, $medium);
-
-      // Wait for FontAwesome to load.
-      display: none;
-
-      .fa-loaded & {
-        display: block;
-      }
-
-      // RTL
-      [dir="rtl"] & {
-        float: right;
-      }
-    }
-  }
-
-  &[open] > summary {
-    &:before {
-      content: $form-details-summary-open; // LTR
-    }
-  }
-
-  &:not([open]) > summary:before {
-    content: $form-details-summary-closed; // LTR
-
-    // RTL
-    [dir="rtl"] & {
-      @include fa-icon-flip(-1, 1, 0);
-    }
-  }
-
   .js & {
     &:not([open]) {
       .details-wrapper {
@@ -228,30 +191,14 @@ details {
         visibility: hidden;
         opacity: 0.1;
       }
-
-      > summary:before {
-        content: $form-details-summary-closed; // LTR
-
-        // RTL
-        [dir="rtl"] & {
-          @include fa-icon-flip(-1, 1, 0);
-        }
-      }
     }
 
     &[open] {
-      max-height: 2500px;
-      overflow: scroll;
+      max-height: 2000px;
 
       .details-wrapper {
         opacity: 1;
         visibility: visible;
-      }
-
-      > summary {
-        &:before {
-          content: $form-details-summary-open; // LTR
-        }
       }
     }
   }

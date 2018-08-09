@@ -1,0 +1,20 @@
+/**
+ * Blocks
+ *  - style custom blocks and block classes.
+ ============================================================================ */
+
+// Advertisement blocks.
+.block-advt {
+  @include output-rhythm(padding, $medium $xxx-large);
+
+  .field,
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  //border: $border-width $border-style;
+  //border-radius: $border-radius;
+}
+
+

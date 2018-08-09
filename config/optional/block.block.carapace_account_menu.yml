@@ -10,7 +10,7 @@ dependencies:
 id: carapace_account_menu
 theme: carapace
 region: leaderboard
-weight: 0
+weight: -10
 provider: null
 plugin: 'system_menu_block:account'
 settings:

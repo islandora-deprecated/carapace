@@ -29,14 +29,12 @@
   left: auto;
 }
 
-.filter-help a,
-.more-help-link a {
+.filter-help a, .more-help-link a {
   background-color: transparent;
   margin-right: 0;
 }
 
-.filter-help a:after,
-.more-help-link a:after {
+.filter-help a:after, .more-help-link a:after {
   font-family: FontAwesome, sans-serif;
   content: "";
   float: right;
@@ -48,8 +46,7 @@
   display: none;
 }
 
-.fa-loaded .filter-help a:after,
-.fa-loaded .more-help-link a:after {
+.fa-loaded .filter-help a:after, .fa-loaded .more-help-link a:after {
   display: inline-block;
 }
 /*# sourceMappingURL=labels.css.map */

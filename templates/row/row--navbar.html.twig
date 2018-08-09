@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default template to display a row.
+ *
+ * Available variables:
+ * - regions: contains regions data to appear in this row.
+ * - wrapper_attributes: HTML attributes for the row outer wrapper.
+ * - container_attributes: HTML attributes for the row inner wrapper.
+ *
+ * @see at_core_preprocess_row()
+ */
+ <div{{ wrapper_attributes.addClass('navbar-pinned') }}>
+  <div{{ container_attributes }}>
+    {{ regions }}
+  </div>
+</div>
+#}
+{{ attach_library('carapace/headroom') }}
+<div{{ row_attributes.addClass('navbar-pinned') }}>
+  {{ row_prefix }}
+  <div{{ wrapper_attributes }}>
+    <div{{ container_attributes }}>
+      {{ regions }}
+    </div>
+  </div>
+  {{ row_suffix }}
+</div>

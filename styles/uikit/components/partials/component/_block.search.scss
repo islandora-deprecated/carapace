@@ -1,0 +1,54 @@
+/**
+ * Block Search
+ * - SEE _search.forms.scss for detailed classes for block search form.
+ ============================================================================ */
+
+.pr-navbar {
+  .block-search {
+    @include output-rhythm(padding, 6px);
+    //@include output-rhythm(margin-top, 4px);
+
+    @media #{$wide} {
+      transform: translateZ(0);
+
+      .form-search {
+        @include output-rhythm(width, 100px);
+        //opacity: 0.85;
+
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+
+        &:hover,
+        &:focus {
+          @include output-rhythm(width, 150px);
+          //opacity: 1;
+        }
+      }
+    }
+
+    @media #{$mobile} {
+      @include output-rhythm(padding, 6px 0);
+
+      &[class*="pull-"] {
+        float: none;
+      }
+    }
+  }
+
+  @media #{$wide} {
+    &__rw {
+      &:not(.rm-row) {
+        .block-search {
+          text-align: $flow-to;
+        }
+      }
+
+      .rm-row {
+        .block-search {
+          float: $flow-to;
+        }
+      }
+    }
+  }
+}

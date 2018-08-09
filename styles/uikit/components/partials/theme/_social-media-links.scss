@@ -22,7 +22,7 @@
   }
 
   .is-horizontal {
-    @include list-horizontal($flow-from, $margin: (t: $x-small, r: 1px, b: $x-small, l: 1px), $list-item-selector: '.platform');
+    @include list-horizontal($flow-from, $margin: (t: 0, r: 1px, b: 0, l: 1px), $list-item-selector: '.platform');
 
     .platform {
       text-align: center;
@@ -76,23 +76,23 @@
   }
 
   .fa-lg + .platform__name {
-    @include output-rhythm(font-size, $medium);
+    @include adjust-font-size-to($medium);
   }
 
   .fa-2x + .platform__name {
-    @include output-rhythm(font-size, $large);
+    @include adjust-font-size-to($large);
   }
 
   .fa-3x + .platform__name {
-    @include output-rhythm(font-size, $x-large);
+    @include adjust-font-size-to($x-large);
   }
 
   .fa-4x + .platform__name {
-    @include output-rhythm(font-size, $xx-large);
+    @include adjust-font-size-to($xx-large);
   }
 
   .fa-5x + .platform__name {
-    @include output-rhythm(font-size, $xxx-large);
+    @include adjust-font-size-to($xxx-large);
   }
 }
 

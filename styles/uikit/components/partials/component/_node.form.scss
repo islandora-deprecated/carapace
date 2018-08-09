@@ -66,6 +66,43 @@
     border-left: 0;
     margin: 0;
     @include output-rhythm(max-height, 45px);
+
+    > summary {
+      &:before {
+        font-family: $icon-font;
+        float: left;
+        margin: -1px 0 0;
+        @include output-rhythm(height, $medium);
+        @include output-rhythm(width, $medium);
+
+        // Wait for FontAwesome to load.
+        display: none;
+
+        .fa-loaded & {
+          display: block;
+        }
+
+        // RTL
+        [dir="rtl"] & {
+          float: right;
+        }
+      }
+    }
+
+    &[open] > summary {
+      &:before {
+        content: $form-details-summary-open; // LTR
+      }
+    }
+
+    &:not([open]) > summary:before {
+      content: $form-details-summary-closed; // LTR
+
+      // RTL
+      [dir="rtl"] & {
+        @include fa-icon-flip(-1, 1, 0);
+      }
+    }
   }
 
   .entity-meta .summary {

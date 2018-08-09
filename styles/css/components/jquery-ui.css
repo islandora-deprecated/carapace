@@ -63,7 +63,7 @@
 
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
   float: none;
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -72,10 +72,13 @@
   max-width: 100%;
   width: auto;
   position: relative;
-  box-sizing: border-box;
-  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0;
   border-width: 1px;
   border-style: solid;
+  -webkit-transition: background-color, .15s, ease-in-out;
+  -o-transition: background-color, .15s, ease-in-out;
   transition: background-color, .15s, ease-in-out;
   cursor: pointer;
   text-decoration: none;

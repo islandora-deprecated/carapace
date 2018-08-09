@@ -5,12 +5,11 @@
   display: none;
 }
 
-.ms-accordion a:hover,
-.ms-accordion a:focus {
+.ms-accordion .menu__link:hover, .ms-accordion .menu__link:focus {
   outline: 0;
 }
 
-.ms-accordion .is-parent a {
+.ms-accordion .is-parent .menu__link {
   margin-left: 2.5rem;
 }
 
@@ -20,15 +19,7 @@
 }
 
 .ms-accordion .rm-accordion-trigger {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
   position: absolute;
   left: 0;
   top: 0;
@@ -36,27 +27,31 @@
   border: 0;
   margin: 0;
   height: 100%;
-  width: 2.25rem;
+  max-width: 2.25rem;
 }
 
-.ms-accordion .rm-accordion-trigger:hover,
-.ms-accordion .rm-accordion-trigger:focus {
+.ms-accordion .rm-accordion-trigger:hover, .ms-accordion .rm-accordion-trigger:focus {
   outline: 0;
 }
 
 .ms-accordion .is-open--parent .rm-accordion-trigger__icon {
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  transition: all, 225ms, ease-in-out;
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
 .ms-accordion .rm-accordion-trigger__icon {
   border-radius: 0;
   border: 0;
-  padding: 0;
-  margin: auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   width: 1rem;
+  padding: 0.625rem;
+  margin: 0;
+  vertical-align: middle;
 }
 
 .ms-accordion .is-child {

@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: $base-font-family;
-  @include output-rhythm(font-size, $medium);
+  @include adjust-font-size-to($medium);
   @include output-rhythm(padding, $small);
 }
 
@@ -40,5 +40,4 @@ dl {
   @include output-rhythm(padding-#{$flow-from}, $xxxx-large);
   padding-#{$flow-to}: 0;
 }
-
 
