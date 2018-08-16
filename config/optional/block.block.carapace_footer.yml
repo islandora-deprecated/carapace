@@ -9,7 +9,7 @@ dependencies:
     - carapace
 id: carapace_footer
 theme: carapace
-region: footer
+region: footer_first
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'

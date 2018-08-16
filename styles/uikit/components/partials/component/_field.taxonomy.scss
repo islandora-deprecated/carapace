@@ -1,46 +1,11 @@
 /**
  * Field Taxonomy Reference (Entity Reference as tags).
+ *  - to have all taxonomy fields themed the same be sure to include the
+ *    word "tags" somewhere in the field name.
  ============================================================================ */
 
-// Adaptivetheme sets entity reference type classes, e.g. taxonomy-term, node or
-// user depending on the reference entity type.
-.field-entity-reference-type-taxonomy-term {
+[class*="tags"].field-type-entity-reference {
 
-  // Items inline.
-  @if ($field-taxonomy-items-inline == true) {
-    .field__item {
-      @include output-rhythm(margin, 0 $xxx-small 0);
-      display: inline-block;
-    }
-
-    &.field-label-above .field__item:first-child {
-      margin-#{$flow-from}: 0;
-    }
-
-    // RTL
-    [dir="rtl"] & li {
-      @include output-rhythm(margin, 0 0 0 $small);
-    }
-  }
-
-  // Comma separated.
-  @if ($field-taxonomy-items-comma-separated == true) {
-    .field__item-wrapper {
-      &:after {
-        content: ",";
-        display: inline-block;
-      }
-    }
-
-    .field__item:last-child {
-      .field__item-wrapper:after {
-        content: "";
-        display: none;
-      }
-    }
-  }
-
-  // Label icon.
   @if $field-taxonomy-label-as-icon == true {
     .field__label {
       &:before {
@@ -62,12 +27,7 @@
     }
   }
 
-  // As labels.
   @if ($field-taxonomy-item-as-labels == true) {
-    .field__item {
-      margin: 0;
-    }
-
     .field__item-wrapper {
       display: inline-block;
       margin: 0 $xxxx-small $xxxx-small 0; // LTR
@@ -94,7 +54,6 @@
     }
   }
 
-  // Item icons.
   @if ($field-taxonomy-item-icons == true) {
     .field__item-wrapper {
       display: inline-block;
@@ -102,9 +61,8 @@
       &:before {
         font-family: $icon-font;
         content: $field-taxonomy-item-icon;
-        @include output-rhythm(font-size, $small);
-        @include output-rhythm(margin, 0 $xxx-small 0 0); // LTR
-        vertical-align: text-bottom;
+        @include adjust-font-size-to($small);
+        @include output-rhythm(margin, 0 $xxxx-small 0 $xx-small); // LTR
 
         // Wait for FontAwesome to load.
         display: none;
@@ -119,9 +77,20 @@
 
         // RTL
         [dir="rtl"] & {
-          @include output-rhythm(margin, 0 0 0 $xxx-small);
+          @include output-rhythm(margin, 0 $xx-small 0 $xxxx-small);
         }
       }
+    }
+  }
+
+  @if ($field-taxonomy-item-as-labels == false and $field-taxonomy-item-icons == false) {
+    .field__item {
+      @include output-rhythm(margin, 0 $small 0 0); // LTR
+    }
+
+    // RTL
+    [dir="rtl"] & li {
+      @include output-rhythm(margin, 0 0 0 $small);
     }
   }
 
@@ -130,36 +99,18 @@
   }
 
   .field__item {
+    margin: 0;
     padding: 0;
+    list-style: none;
   }
 
-  &.field-label-above {
-    .field__label {}
-    .field__item {}
-  }
+  .field-label-above {}
 
-  &.field-label-inline {
+  .field-label-inline {
     .field__label,
     .field__item {}
   }
-
-  &.field-label-hidden,
-  &.field-label-visually_hidden {
-    .field__label {}
-    .field__item {}
-  }
-
-  // Adaptivetheme sets entity reference classes for the formatter.
-  &.field-formatter-entity-reference-entity-id,
-  &.field-formatter-entity-reference-label {
-
-    &.field-label-above {}
-    &.field-label-inline {}
-    &.field-label-hidden {}
-    &.field-label-visually_hidden {}
-
-    .field__label {}
-    .field__item {}
-  }
 }
+
+
 

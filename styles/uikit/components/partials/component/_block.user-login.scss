@@ -1,39 +1,15 @@
 /**
  * Block User Login
- * Style the theme settings for login block (horizontal, placeholders etc).
+ *  - style the theme settings for login block (horizontal, placeholders etc).
  ============================================================================ */
-
-.block-plugin-id--user-login-block {
-
-  // Hide the "required" astrix's, not required in this context.
-  .form-required:after {
-    display: none;
-  }
-
-  .item-list__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    a {
-      display: block;
-    }
-  }
-}
-
 
 .is-horizontal-login-block {
   @include output-rhythm(margin, $x-small 0 $medium);
 
-  .block__inner {
-    @include cfm;
-  }
-
   .block__title {
     font-family: inherit;
-    text-align: $flow-from;
-    @include output-rhythm('font-size', $medium);
-    @include output-rhythm('line-height', $form_input_button_select_height);
+    margin: 0;
+    @include adjust-font-size-to($medium);
   }
 
   .block__title,
@@ -42,8 +18,7 @@
   .user-login-form > div,
   .form-item,
   .form-actions{
-    float: $flow-from;
-    @include output-rhythm(margin, 0 $xxxx-small 0 0);
+    display: inline-block;
   }
 
   form,
@@ -53,7 +28,7 @@
   }
 
   label {
-    @include output-rhythm(font-size, $medium * 0.75);
+    @include adjust-font-size-to($medium * 0.75);
     font-weight: $font-weight-normal;
   }
 }

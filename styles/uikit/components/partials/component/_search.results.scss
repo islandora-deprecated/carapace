@@ -12,11 +12,11 @@
 
   // Style the empty message.
   &--empty h3 {
-    @include output-rhythm(font-size, $large);
+    @include adjust-font-size-to($large);
   }
 
   &__item {
-    @include output-rhythm(margin-bottom, $x-large);
+    @include output-rhythm(margin-bottom, $large);
     padding: 0;
     list-style: none;
   }
@@ -36,7 +36,7 @@
   // title, not the snippet/description, so we make this smaller to enhance the
   // visibility of the titles.
   &__snippet-info {
-    @include output-rhythm(font-size, $medium * .875); // 14px
+    @include adjust-font-size-to($medium * .875); // 14px
   }
 
   &__snippet {}

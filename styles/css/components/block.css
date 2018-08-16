@@ -3,6 +3,20 @@
  *  - base styles for block templates.
  ============================================================================ */
 .block {
-  margin: 1.25em 0;
+  margin: 1.625rem 0;
 }
+
+.block__title {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.block__content p:last-of-type {
+  margin: 0;
+}
+
+/**
+ * Styles for Twitter block module blocks:
+ * https://www.drupal.org/project/twitter_block
+ ============================================================================ */
 /*# sourceMappingURL=block.css.map */

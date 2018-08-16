@@ -7,11 +7,10 @@
 .messages {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  padding: 1.25em;
-  margin: 1.25em 0;
+  padding: 1rem;
+  margin: 1.625rem 0;
   border: 1px solid;
-  border-radius: 2px;
-  box-shadow: none;
+  border-radius: 0;
 }
 
 .messages + .messages {
@@ -20,7 +19,8 @@
 }
 
 .messages .container {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .messages__list {

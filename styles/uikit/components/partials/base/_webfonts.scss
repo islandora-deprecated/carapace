@@ -29,3 +29,13 @@
 // Typekit - styles to use after Typekit is loaded.
 .wf-active {}
 
+
+/* Web font smoothing */
+:after,
+:before {
+  text-rendering: auto;
+  @include font-smoothing();
+}
+
+
+

@@ -18,7 +18,8 @@
 
 
 .breadcrumb {
-  margin: 1.25em 0;
+  @include output-rhythm(margin, $large 0);
+  @include cf;
 
   &__title {
     font-size: inherit;
@@ -99,8 +100,6 @@
         @include output-rhythm(margin-#{$flow-to}, $xx-small);
       }
     }
-
-    &__link {}
   }
   .is-horizontal & {
     &__title {
@@ -118,10 +117,6 @@
       &:first-child:before {
         display: none;
       }
-    }
-
-    &__link {
-      display: inline-block;
     }
   }
 

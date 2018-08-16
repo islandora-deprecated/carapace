@@ -21,7 +21,6 @@
   }
 }
 
-
 // Row outer wrapper:
 // .l-pr is a layout class on each page row outer wrapper.
 .l-pr {
@@ -34,7 +33,7 @@
 //  - .l-rw is the main layout wrapper selector for all regions within a row.
 //    The layout system uses this wrapper and selector extensively.
 .l-rw {
-  padding: 0 0.625em; // Avoid browser chrome collision.
+  //padding: 0 0.625em; // Avoid browser chrome collision.
   //background-color: greenyellow !important;
 }
 
@@ -59,5 +58,4 @@
 .field {
   //background-color: ghostwhite !important;
 }
-
 

@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -9,8 +9,8 @@ dependencies:
     - carapace
 id: carapace_tools
 theme: carapace
-region: sidebar_second
-weight: 10
+region: '-1'
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -4,22 +4,13 @@
  *    the Markup overrides extension.
  ============================================================================ */
 
-// Ensure this comes last in the order for flex-builder layouts.
-.l-attribution {
-  order: 100;
-}
-
 .attribution {
-  .l-rw {
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 2rem;
-    text-align: $flow-to;
-  }
+  text-align: $flow-to;
 
   &__link {
     text-decoration: none;
-    @include output-rhythm(font-size, $small);
+    @include adjust-font-size-to($small);
+    display: inline-block;
+    @include output-rhythm(padding-bottom, $xxx-small);
   }
 }
-

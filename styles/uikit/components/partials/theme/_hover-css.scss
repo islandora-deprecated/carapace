@@ -1,0 +1,80 @@
+/**
+ * Hover CSS effects, house in one easy location.
+ ============================================================================ */
+
+// Underline From Center
+.menu a {
+  &:not(.button):not([class*="toolbar"]) {
+    display: block;
+    vertical-align: middle;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    filter: blur(0.1px);
+    position: relative;
+    overflow: hidden;
+    //width: 100%;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      height: 2px;
+      transition-property: left, right;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+      overflow: hidden;
+    }
+
+    &:hover:before,
+    &:focus:before,
+    &:active:before {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+
+// Additional links.
+.node {
+  :not(.field-type-image) a {
+    display: inline-block;
+    vertical-align: bottom;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    filter: blur(0.1px);
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      height: 1px;
+      background-color: inherit;
+      transition-property: left, right;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover:before,
+    &:focus:before,
+    &:active:before {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__title a:before {
+    display: none;
+  }
+}
+

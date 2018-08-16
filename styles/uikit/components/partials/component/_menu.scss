@@ -10,10 +10,9 @@
   margin: 0;
   list-style: none;
 
-  a {
+  .menu__link {
     display: block;
-    @include output-rhythm(padding, $menu-item-padding 0);
-    @include output-rhythm(margin, $menu-item-margin 0);
+    @include output-rhythm(padding, $xxxx-small 0);
     //border-bottom: $border-width $border-style;
 
     &:hover,
@@ -53,15 +52,15 @@
 .menu__item {
   text-align: $menu-text-align;
 
-  &--active-trail > a {}
+  &--active-trail > span > .menu__link {}
 
   // If menu arrows are true, add font-awesome and icons for
   // expanded and collapsed selectors.
   @if $menu-arrows == true {
-    &--collapsed > a,
-    &--expanded > a {}
+    &--collapsed > span > .menu__link,
+    &--expanded > span > .menu__link {}
 
-    > a:after {
+    > span > .menu__link:after {
       font-family: $icon-font;
       content: $menu-arrow-right;
       float: $flow-to;
@@ -70,7 +69,7 @@
       @include output-rhythm(width, $medium);
     }
 
-    &--expanded > a:after {
+    &--expanded > span > .menu__link:after {
       content: $menu-arrow-down ;
     }
 
@@ -81,8 +80,10 @@
   }
 
   // Add the border top to the first item only.
-  &:first-child a {
+  &:first-child .menu__link {
     //border-top: $border-width $border-style;
   }
 }
+
+
 

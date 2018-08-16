@@ -15,7 +15,8 @@
 }
 
 #toolbar-administration button {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-shadow: none;
 }
 
@@ -24,15 +25,10 @@
 }
 
 #toolbar-administration .toolbar-menu-administration a {
-  color: #565656;
+  color: #434343;
   padding-top: 1em;
   padding-bottom: 1em;
   border: 0;
-}
-
-#toolbar-administration .toolbar-menu-administration a:visited,
-#toolbar-administration .toolbar-menu-administration a:active {
-  color: #565656;
 }
 
 #toolbar-administration .level-3 ul {
@@ -40,6 +36,6 @@
 }
 
 #toolbar-administration .toolbar-tray-horizontal a {
-  padding-right: 1.3334em;
+  padding-right: 1em;
 }
 /*# sourceMappingURL=toolbar.css.map */

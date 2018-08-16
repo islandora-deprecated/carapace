@@ -24,12 +24,10 @@ head:hover {
   background: rgba(255, 255, 255, 0.5);
   color: red;
 }
-head:hover ~ .regions,
-head:hover ~ body .regions {
+head:hover ~ .regions, head:hover ~ body .regions {
   position: relative;
 }
-head:hover ~ .regions:before,
-head:hover ~ body .regions:before {
+head:hover ~ .regions:before, head:hover ~ body .regions:before {
   position: absolute;
   top: 0;
   left: 0;

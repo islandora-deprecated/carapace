@@ -11,7 +11,7 @@
   border-radius: $border-radius;
 
   @include output-rhythm(padding, 1px 3px);
-  @include output-rhythm(font-size, $medium * 0.75);
+  @include adjust-font-size-to($medium*0.75);
 
   font-family: $base-font-family;
 

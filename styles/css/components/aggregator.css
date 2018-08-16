@@ -2,17 +2,16 @@
  * Aggregator
  ============================================================================ */
 .aggregator-feed {
-  margin-bottom: 1.25em;
+  margin-bottom: 1rem;
 }
 
 .aggregator-item {
-  margin-bottom: 1.25em;
-  padding: 1.25em;
-  border-radius: 2px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0;
 }
 
-.aggregator-item:before,
-.aggregator-item:after {
+.aggregator-item:before, .aggregator-item:after {
   content: " ";
   display: table;
 }
@@ -27,14 +26,5 @@
 
 .item-description {
   margin: 1rem 0;
-}
-
-.block-plugin-id--aggregator-feed-block .item-list__item {
-  margin-bottom: 0.625rem;
-}
-
-.block-plugin-id--aggregator-feed-block .item-list__item a {
-  display: inline-block;
-  line-height: 1.25;
 }
 /*# sourceMappingURL=aggregator.css.map */

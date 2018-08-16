@@ -31,11 +31,11 @@
       font-family: $icon-font;
       content: "\f0dc";
       position: absolute;
-      @include output-rhythm(top, $medium * 0.25);
-      @include output-rhythm(#{$flow-to}, $medium * 0.75);
+      top: 0.235rem;
+      #{$flow-to}: 0.5rem;
+      z-index: 2;
       pointer-events: none;
       display: none;
-      //z-index: 2;
     }
   }
 
@@ -52,7 +52,7 @@
 
 // Firefox <= 34 has a false positive on @supports( -moz-appearance: none )
 // @supports ( mask-type: alpha ) is Firefox 35+
-@supports (-webkit-appearance: none) or (appearance: none) or ((-moz-appearance: none) and (mask-type: alpha)) {
+@supports (-webkit-appearance: none) or (appearance: none) or (( -moz-appearance: none) and (mask-type: alpha)) {
 	.form-type-select__select-wrapper {
     &:not(.is-multiple) {
       &:after {
@@ -64,9 +64,7 @@
 
       .form-select {
         @include output-rhythm(text-indent, 3px);
-        @include output-rhythm(padding-#{$flow-to}, $medium * 1.5);
-        @include output-rhythm(margin-right, $medium / 2);
-
+        padding-#{$flow-to}: 1.5em;
         border-width: $border-width;
         border-style: $border-style;
         appearance: none;
@@ -207,21 +205,17 @@ h4.label,
 
 // Form required.
 .form-required:after {
-  font-family: $base-font-family; // protect the asterisk from webfonts etc.
-  content: " \002A ";
+  content: " * ";
   line-height: 1;
 }
 
 
-// abbr in drupal forms, often used to indicate a state change.
+// abbr usesage in drupal forms.
 abbr {
   &.form-required,
+  &.tabledrag-changed,
   &.ajax-changed {
     border-bottom: none;
-  }
-
-  &.tabledrag-changed {
-    @include visually-hidden;
   }
 }
 
@@ -242,7 +236,6 @@ abbr {
 
   div,
   label {
-    display: flex;
     @include output-rhythm(margin-#{$flow-to}, $xxx-small);
   }
 
@@ -254,11 +247,6 @@ abbr {
   &.form-actions {
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  // YAML module support
-  .yamlform-flex--container > .form-item {
-    @include output-rhythm(margin-#{$flow-to}, $xxx-small);
   }
 }
 

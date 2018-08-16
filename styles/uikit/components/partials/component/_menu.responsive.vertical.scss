@@ -5,10 +5,4 @@
  * menu also.
  ============================================================================ */
 
-.ms-vertical {
-  .rm-toggle {
-    display: none;
-  }
-}
-
 @include vertical-accordion($arrows: false);

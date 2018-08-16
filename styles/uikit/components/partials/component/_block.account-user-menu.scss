@@ -1,0 +1,38 @@
+/**
+ * User account menu block.
+ ============================================================================ */
+.block {
+  .menu-name--account {
+
+    .menu-plugin-id--userlogout,
+    .menu-plugin-id--userpage {
+      a:after {
+        font-family: $icon-font;
+        margin: 0;
+        text-align: $flow-to;
+
+        @include output-rhythm(width, $large);
+        @include output-rhythm(padding, 0 0 0 4px);
+
+        // Wait for FontAwesome to load.
+        display: none;
+        .fa-loaded & {
+          display: inline-block;
+        }
+      }
+    }
+
+    .menu-plugin-id--userpage a:after {
+      content: "\f007";
+    }
+
+    .menu-plugin-id--userlogout a:after {
+      content: "\f08b";
+
+      .user-logged-out & {
+        content: "\f090";
+      }
+    }
+  }
+}
+

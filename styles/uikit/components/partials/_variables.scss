@@ -45,7 +45,7 @@ $ms-ratio : $golden;
 // functions to convert to rem where required, or simply use the variable if you
 // want a pixel value.
 //
-// For example we use the compass mixin: output-rhythm(font-size, ) which returns
+// For example we use the compass mixin: adjust-font-size-to() which returns
 // both the font-size and line-height in rem with a px fallback for browsers
 // that do not support rem units.
 //
@@ -53,22 +53,23 @@ $ms-ratio : $golden;
 // the line-height, e.g.:
 //
 // .selector {@include font-size($medium);} will return:
-// .selector {font-size: 1rem;}
+// .selector {font-size: 16px; font-size: 1rem;}
 //
-// Create half notes by dividing a note, for example to split padding top and
-// bottom, i.e. @include output-rhythm(padding, ($small / 2) 0);
+// Throughout the UIKit you will see other Compass mixins used to return px and
+// rem units, such as consistently using output-rhythm() to achieve full browser
+// support.
 
-$xxxx-large    : ms(5);
-$xxx-large     : ms(4);
-$xx-large      : ms(3);
-$x-large       : ms(2);
-$large         : ms(1);
-$medium        : ms(0);
-$small         : ms(-1);
-$x-small       : ms(-2);
-$xx-small      : ms(-3);
-$xxx-small     : ms(-4);
-$xxxx-small    : ms(-5);
+$xxxx-large : ms(5);
+$xxx-large  : ms(4);
+$xx-large   : ms(3);
+$x-large    : ms(2);
+$large      : ms(1);
+$medium     : ms(0);
+$small      : ms(-1);
+$x-small    : ms(-2);
+$xx-small   : ms(-3);
+$xxx-small  : ms(-4);
+$xxxx-small : ms(-5);
 
 
 // Font Weights
@@ -103,6 +104,7 @@ $font-monospace   : $monospace;
 //
 // =============================================================================
 
+
 // Global padding
 // Matches the global padding set in the layout (e.g. flex-builder). We use this
 // to ensure things like gutters are teh same everywhere, or use it recalculate
@@ -110,7 +112,25 @@ $font-monospace   : $monospace;
 $global-padding: 0.625em;
 
 
-// Lighten and Darken (avoid if using color module)
+
+// Neutral light gray
+// #E0E0E0
+// #E3E3E3
+// #E5E5E5
+// #E8E8E8
+// #EBEBEB
+// #EDEDED
+//
+// #F0F0F0
+// #F2F2F2
+// #F5F5F5
+// #F7F7F7
+// #FAFAFA
+// #FCFCFC
+// #FFFFFF
+
+
+// Lighten and Darken
 // -----------------------------------------------------------------------------
 $lighten      : 3%;
 $lighten-more : 5%;
@@ -122,7 +142,7 @@ $darken-most  : 10%;
 
 // Global Transition
 // -----------------------------------------------------------------------------
-$global-transition        : all, 225ms, ease-in-out;
+$global-transition: all, .2s, ease-in-out;
 
 
 // Color module
@@ -132,7 +152,7 @@ $base-color               : #000000;
 
 // Text colors
 // -----------------------------------------------------------------------------
-$text-color               : #363636;
+$text-color               : #404040;
 $text-color-light         : #808080;
 $text-color-medium        : #5c5c5c;
 
@@ -140,10 +160,11 @@ $text-background-color-light  : #f2f2f2;
 $text-background-color-normal : #ededed;
 $text-background-color-dark   : #e8e8e8;
 
+$site-name : #434343;
 
 // Link colors
 // -----------------------------------------------------------------------------
-$link-color               : #0066cc;
+$link-color               : #3188d1;
 $link-hover-color         : $link-color;
 $link-active-color        : $link-color;
 $link-visited-color       : $link-color;
@@ -152,11 +173,11 @@ $link-visited-hover-color : $link-color;
 
 // Borders
 // -----------------------------------------------------------------------------
-$border-width             : $default-rhythm-border-width;
-$border-style             : $default-rhythm-border-style;
+$border-width             : 1px;
+$border-style             : solid;
 $border-color             : #cccccc;
-$border-color-light       : #eeeeee;
-$border-radius            : 2px;
+$border-color-light       : #ebebeb;
+$border-radius            : 0;
 
 
 // Success colors
@@ -207,72 +228,66 @@ $even-color : $text-background-color-normal;
 //
 // =============================================================================
 
-
 // Page, Regions, Blocks and element specific styles.
 // -----------------------------------------------------------------------------
 
-// body background color.
-$body-background-color             : #333333;
+// body element.
+$body-background-color    : #333333;
 
-// .page background color.
-$page-background-color             : #f7f7f7;
+// .page, an inner-body full width page background.
+$page-background-color    : #e8e8e8;
 
-// Row background colors.
-$row-background-color-very-lite    : #fafafa;
-$row-background-color-lite         : $page-background-color;
-$row-background-color-medium-lite  : #ebebeb;
-$row-background-color-medium       : #d3d3d3;
-$row-background-color-medium-dark  : #999999;
-$row-background-color-dark         : #757575;
-$row-background-color-very-dark    : #666666;
+// Wrapper around regions, the max-width is set on this wrapper.
+$regions-background-color : #ffffff;
 
-// Regions wrapper background color.
-$regions-background-color          : $row-background-color-lite;
+
+// Page Row colors - for the site-builder layout plugin.
+// -----------------------------------------------------------------------------
 
 // Full width background toggle.
-$page-row-fullwidth : true;
+$page-row-fullwidth : false;
 $regions-padding    : $medium;
 
 // Leaderboard.
-$page-leaderboard-color                : $text-color;
-$page-leaderboard-background-color     : $row-background-color-lite;
+$page-leaderboard-color                : #f5f5f5;
+$page-leaderboard-background-color     : #363636;
 
 // Header.
-$page-header-color                     : $text-color;
-$page-header-background-color          : $row-background-color-very-lite;
+$page-header-color                     : #a9a9a9;
+$page-header-background-color          : #f0f0f0;
 
 // Navbar.
-$page-navbar-color                     : #ffffff;
-$page-navbar-background-color          : $row-background-color-very-dark;
-$page-navbar-hover-background-color    : $row-background-color-dark;
+$page-navbar-color                     : #fafafa;
+$page-navbar-background-color          : #171717;
+$page-navbar-hover-background-color    : $page-navbar-background-color;
 
 // Highlighted.
 $page-highlighted-color                : $text-color;
-$page-highlighted-background-color     : $row-background-color-lite;
+$page-highlighted-background-color     : $regions-background-color;
 
 // Features.
 $page-features-color                   : $text-color;
-$page-features-background-color        : $row-background-color-medium;
+$page-features-background-color        : $regions-background-color;
 
 // Content prefix.
 $page-content-prefix-color             : $text-color;
-$page-content-prefix-background-color  : $row-background-color-lite;
+$page-content-prefix-background-color  : $regions-background-color;
 
 // Main.
 $page-main-color                       : $text-color;
-$page-main-background-color            : $row-background-color-lite;
+$page-main-background-color            : $regions-background-color;
 
 // Content suffix.
 $page-content-suffix-color             : $text-color;
-$page-content-suffix-background-color  : $row-background-color-lite;
+$page-content-suffix-background-color  : $regions-background-color;
 
 // Sub features.
 $page-subfeatures-color                : $text-color;
-$page-subfeatures-background-color     : $row-background-color-medium;
+$page-subfeatures-background-color     : $regions-background-color;
 
-// Footer.
-$page-footer-color                     : #ffffff;
-$page-footer-background-color          : $row-background-color-very-dark;
+// Footer (+ footer cols)
+$page-footer-color                     : #e3e3e3;
+$page-footer-background-color          : #292929;
 
 
 // Branding
@@ -292,10 +307,11 @@ $block-title-background-color      : #ffffff;
 $block-link-color                  : $link-color;
 
 // Sidebar blocks
-//$sidebar-block-header-background-color : $regions-background-color;
-//$sidebar-block-header-color            : $text-color;
-//$sidebar-block-body-background-color   : $regions-background-color;
-//$sidebar-block-body-color              : $text-color;
+$sidebar-block-header-background-color : #e0e0e0;
+$sidebar-block-header-color            : $text-color;
+$sidebar-block-body-background-color   : #f7f7f7;
+$sidebar-block-body-color              : $text-color;
+
 
 
 // Menus
@@ -318,14 +334,12 @@ $menu-border-width                 : $border-width;
 $menu-border-style                 : $border-style;
 $menu-border-radius                : $border-radius;
 
-$menu-item-padding                 : $min-line-padding;
-$menu-item-margin                  : $min-line-margin;
-
-$menu-arrows                       : false;
+$menu-arrows                       : true;
 
 
 // Responsive Menus
 // -----------------------------------------------------------------------------
+
 $resp-menu-color                   : $page-navbar-color;
 $resp-menu-background-color        : $page-navbar-background-color;
 
@@ -342,8 +356,21 @@ $resp-menu-arrows                  : true;
 $dropmenu-item-width               : 12em;
 $dropmenu-arrows                   : true;
 
-// Slidedown
-$slidedown-background-color        : $row-background-color-very-lite;
+
+//$resp-menu-color                   : inherit;
+//$resp-menu-background-color        : inherit;
+//
+//$resp-menu-hover-color             : inherit;
+//$resp-menu-active-color            : inherit;
+//
+//$resp-menu-hover-background-color  : rgba(255, 255, 255, 0.095);
+//$resp-menu-active-background-color : rgba(255, 255, 255, 0.095);
+//
+//$resp-menu-z-index                  : 480;
+//
+//// Drop Menu
+//$dropmenu-item-width               : 12em;
+//$dropmenu-arrows                   : true;
 
 
 // Nodes
@@ -357,7 +384,10 @@ $node-teaser-border-width          : $border-width;
 $node-teaser-border-style          : $border-style;
 
 $node-box-shadow                   : 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-$node-teaser-box-shadow            : $node-box-shadow;
+$node-teaser-box-shadow            : none;
+
+$node-links-color                  : $text-color;
+$node-links-background-color       : $text-background-color-normal;
 
 
 // Forms & Dialog
@@ -394,7 +424,7 @@ $vertical-tabs-border-color          : $form-border-color;
 $vertical-tabs-background-color      : $form-background-color;
 
 $vertical-tabs-menu-background-color : $form-background-color;
-$vertical-tabs-selected-color        : $text-background-color-light;
+$vertical-tabs-selected-color        : $sidebar-block-body-background-color;
 
 
 // Buttons
@@ -404,7 +434,7 @@ $button-text-align                 : center;
 $button-color                      : #fcfcfc;
 $button-hover-color                : $button-color;
 
-$button-background-color           : #828282;
+$button-background-color           : #999999;
 $button-background-hover-color     : $button-background-color;
 
 $button-border-color               : $button-background-color;
@@ -412,7 +442,7 @@ $button-border-width               : $border-width;
 $button-border-style               : $border-style;
 $button-border-radius              : $border-radius;
 
-$button-box-shadow                 : true;
+$button-box-shadow                 : false;
 
 // Button Primary
 $button-primary-text-color         : $button-color;
@@ -442,7 +472,7 @@ $tab-border-width                  : $border-width;
 $tab-border-style                  : $border-style;
 $tab-border-radius                 : $border-radius;
 
-$tab-box-shadow                    : true;
+$tab-box-shadow                    : false;
 
 
 // Lists
@@ -487,7 +517,7 @@ $table-cell-borders                : true; // set to false to remove td/th borde
 $table-border-color                : $border-color;
 
 // thead.
-$thead-background-color            : $text-background-color-dark;
+$thead-background-color            : $sidebar-block-body-background-color;
 $thead-text-color                  : $text-color;
 
 // Row striping.
@@ -501,18 +531,16 @@ $table-col-odd-color               : $text-background-color-light;
 $table-col-even-color              : $regions-background-color;
 
 // Hover
-$tr-hover                          : true;
+$tr-hover                          : false;
 $tr-hover-color                    : $text-background-color-normal;
 
 
 // Fields
 // -----------------------------------------------------------------------------
 // By default we only have settings for taxonomy term reference fields (tags).
-$field-taxonomy-item-as-labels        : false;
-$field-taxonomy-item-icons            : false;
-$field-taxonomy-label-as-icon         : false; // Label must not be hidden in field display settings.
-$field-taxonomy-items-comma-separated : true;
-$field-taxonomy-items-inline          : true;
+$field-taxonomy-item-as-labels     : false;
+$field-taxonomy-item-icons         : true;
+$field-taxonomy-label-as-icon      : false; // Label must not be hidden in field display settings.
 
 
 // Font Icons
@@ -573,6 +601,9 @@ $field-taxonomy-item-icon          : $fa-var-tag;
 
 // Elements.
 $blockquote-icon                   : $fa-var-quote-left;
+$blockquote-color                  : #767676;
+$blockquote-background-color       : inherit;
+$blockquote-small-color            : $blockquote-color;
 
 // Messages.                       // FontAwesome variables
 $messages-status-icon              : $fa-var-smile-o;
@@ -582,6 +613,9 @@ $messages-error-icon               : $fa-var-frown-o;
 // Table sort.
 $table-sort-asc                    : $fa-var-caret-down;
 $table-sort-desc                   : $fa-var-caret-up;
+
+// Feed icon
+$feed-icon-fill                    : $text-color;
 
 
 // States - e.g. sticky, promoted etc.
@@ -602,5 +636,24 @@ $preview-background-color          : #ffffea;
 // Patterns
 // -----------------------------------------------------------------------------
 // Patterns are image files that can be set on the page and row backgrounds.
-$patterns: null; // A list of pattern file names
+$patterns: (
+  pattern-1,
+  pattern-2,
+  pattern-3,
+  pattern-4,
+  pattern-5,
+  pattern-6,
+  pattern-7,
+  pattern-8,
+  pattern-9,
+  pattern-10,
+  pattern-11,
+  pattern-12,
+  pattern-13,
+  pattern-14,
+  pattern-15,
+  pattern-16
+); // A list of pattern file names
+
+
 

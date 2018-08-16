@@ -16,6 +16,35 @@
   max-height: none !important;
 }
 
+.spaceless-blocks .block {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.spaceless-nodes .node {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.spaceless-fields .field {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+}
+
+.line-height-compact {
+  line-height: 1.2 !important;
+}
+
+.line-height-one {
+  line-height: 1 !important;
+}
+
 .rm-padding {
   padding: 0;
 }

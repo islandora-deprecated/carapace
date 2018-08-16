@@ -1,12 +1,13 @@
 // Import mixins.
-@import
-  "clearfixes",
-  "show-hide",
-  "font",
-  "align",
-  "list",
-  "images",
-  "button-variant",
-  "page",
-  "menu";
 
+@import
+  "vertical-rhythm/vertical-rhythm",
+  "utility/clearfixes",
+  "utility/show-hide",
+  "font/font",
+  "utility/align",
+  "list/list",
+  "images/images",
+  "button/button-variant",
+  "page/page",
+  "menu/menu";

@@ -6,7 +6,6 @@
 // the CKEditor (wysiwyg). When captions are used images are wrapped in
 // a figure element.
 img,
-figure,
 .field-type-image__figure {
 
   @media #{$wide} {
@@ -32,33 +31,6 @@ figure,
 
   &.align-center {
     @include output-rhythm(margin-bottom, $medium);
-
-    figcaption {
-      text-align: center;
-    }
-  }
-
-  &[class*="align-"] {
-    clear: both;
-  }
-}
-
-
-// In editor margins.
-.cke_widget_wrapper {
-  &.align-left {
-    @include output-rhythm(margin, 0 $medium $medium 0);
-  }
-
-  &.align-right {
-    @include output-rhythm(margin, 0 0 $medium $medium);
-  }
-  &.align-center {
-    @include output-rhythm(margin-bottom, $medium);
-
-    figcaption {
-      text-align: center;
-    }
   }
 
   &[class*="align-"] {

@@ -17,11 +17,11 @@
 // Change them to suit your requirements.
 //
 //   mobile-isolate - 0 to 45em (0 to 720px), small screens only.
-//   tablet-isolate - 45.0625em and max-width 65em (721px to 960px), isolate tablets.
-//   wide-isolate   - 60.0625em and max-width 120em (961px to 1920px), isolate tablets.
-//   tablet         - 45.0625em (721px) and up.
-//   wide           - 60.0625em (961px) and up.
-//   huge           - 120.0625em (1921px) and up, for big resolution.
+//   tablet-isolate - 45.063em and max-width 65em (721px to 960px), isolate tablets.
+//   wide-isolate   - 60.063em and max-width 120em (961px to 1920px), isolate tablets.
+//   tablet         - 45.063em (721px) and up.
+//   wide           - 60.063em (961px) and up.
+//   huge           - 120.063em (1921px) and up, for big resolution.
 //
 // Here you can see how each breakpoint cascades or isolates. Most of the time
 // a layout will use tablet-isolate and widescreen OR tablet-isolate,
@@ -35,13 +35,13 @@
 //                                                                | $huge ----->
 //
 // Isolate with min/max.
-$mobile-isolate : "screen and (max-width: 45em)";
-$tablet-isolate : "screen and (min-width: 45.0625em) and (max-width: 60em)";
-$wide-isolate   : "screen and (min-width: 60.0625em) and (max-width: 120em)";
+$mobile-isolate : "all and (max-width: 45em)";
+$tablet-isolate : "all and (min-width: 45.063em) and (max-width: 60em)";
+$wide-isolate   : "all and (min-width: 60.063em) and (max-width: 120em)";
 // Min width only.
-$tablet         : "screen and (min-width: 45.0625em)";
-$wide           : "screen and (min-width: 60.0625em)";
-$huge           : "screen and (min-width: 120.0625em)";
+$tablet         : "all and (min-width: 45.063em)";
+$wide           : "all and (min-width: 60.063em)";
+$huge           : "all and (min-width: 120.063em)";
 
 
 // Breakpoints - Responsive Menus
@@ -62,5 +62,5 @@ $huge           : "screen and (min-width: 120.0625em)";
 // | mobile ------------->|
 // | maxwidth ------------------------------->|
 //
-$mobile    : "screen and (max-width: 60em)";
-$max-width : "screen and (max-width: 75em)";
+$mobile    : "all and (max-width: 60em)";
+$max-width : "all and (max-width: 75em)";

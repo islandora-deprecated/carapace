@@ -113,6 +113,11 @@
   .loading & {
     max-height: 300px;
   }
+
+  img[class*="align-"],
+  .field-type-image__figure[class*="align-"] {
+    clear: none;
+  }
 }
 
 

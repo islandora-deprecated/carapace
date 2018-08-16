@@ -8,7 +8,7 @@ dependencies:
 id: carapace_help
 theme: carapace
 region: content
-weight: 2
+weight: -7
 provider: null
 plugin: help_block
 settings:

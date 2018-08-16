@@ -6,18 +6,27 @@
 // Almost everything in Druapl 8 is a block, so these classes are very generic
 // and it can be dangerous to add styles like font-size or colors.
 .block {
-  margin: 1.25em 0;
+  @include output-rhythm(margin, $x-large 0);
 }
 
 // Block title.
-.block__title {}
+.block__title {
+  @include adjust-font-size-to($large);
+}
 
 // The block has a title.
 .block.has-title {}
 
 // Note, Menu blocks use .block-menu__content, see below.
 .block__content {
-
-  p:last-of-type {}
+  p:last-of-type {
+    margin: 0;
+  }
 }
+
+
+
+
+
+
 

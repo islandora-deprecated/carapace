@@ -3,13 +3,12 @@
  *  - styles for the Add to Any module.
  *  - https://www.drupal.org/project/addtoany
  ============================================================================ */
-.addtoany_list {
-  display: block;
-  margin-bottom: 1rem;
-}
-
 .addtoany_list > a {
   padding: 0 0.125rem;
+}
+
+.addtoany_list > a:after, .addtoany_list > a:before {
+  display: none;
 }
 
 .addtoany_list .addtoany_share_save {

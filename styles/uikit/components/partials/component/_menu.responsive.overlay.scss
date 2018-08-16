@@ -5,5 +5,5 @@
  * and fills the whole screen.
  ============================================================================ */
 // Change the $toggle_position values to move to the top/left etc.
-@include overlay($toggle_position: (vert: top, horz: right));
+@include overlay($toggle_position: (vert: bottom, horz: right));
 
