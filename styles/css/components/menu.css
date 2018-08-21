@@ -71,6 +71,7 @@
  ============================================================================ */
 .pr-leaderboard {
   /* Mixin */
+  display: inherit;
 }
 
 .pr-leaderboard .block-menu {

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Functions to support theming in the Carapace theme.
+ */
+
 use Drupal\Component\Utility\Xss;
 use Drupal\Component\Utility\Html;
 
@@ -37,7 +42,7 @@ function carapace_library_info_build() {
       $libraries[$theme . '.layout.' . $key] = [
         'css' => [
           'layout' => [
-            'styles/css/generated/' . $theme . '.layout.'  . $suggestion . '.css' => [],
+            'styles/css/generated/' . $theme . '.layout.' . $suggestion . '.css' => [],
           ],
         ],
       ];
@@ -104,12 +109,12 @@ function carapace_page_attachments_alter(array &$page) {
   // Attach module dependant libraries.
   // These libraries are declared in your themeName.libraries.yml and we only
   // load if the module is installed.
-  $module_libraries = array(
+  $module_libraries = [
     'addtoany',
     'ds',
     'social_media_links',
     'superfish',
-  );
+  ];
   $theme_libraries = \Drupal::service('library.discovery')->getLibrariesByExtension($theme);
   foreach ($module_libraries as $module_library) {
     if (array_key_exists($module_library, $theme_libraries) && \Drupal::moduleHandler()->moduleExists($module_library) === TRUE) {
@@ -124,7 +129,7 @@ function carapace_page_attachments_alter(array &$page) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_html(&$variables) {
 }
-// */
+ */
 
 /**
  * Preprocess variables for page templates.
@@ -132,7 +137,7 @@ function carapace_preprocess_html(&$variables) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_page(&$variables) {
 }
-// */
+ */
 
 /**
  * Preprocess variables for field templates.
@@ -140,7 +145,7 @@ function carapace_preprocess_page(&$variables) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_field(&$variables) {
 }
-// */
+ */
 
 /**
  * Preprocess variables for node templates.
@@ -148,7 +153,7 @@ function carapace_preprocess_field(&$variables) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_node(&$variables) {
 }
-// */
+ */
 
 /**
  * Preprocess variables for comment templates.
@@ -156,7 +161,7 @@ function carapace_preprocess_node(&$variables) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_comment(&$variables) {
 }
-// */
+ */
 
 /**
  * Preprocess variables for block templates.
@@ -164,4 +169,4 @@ function carapace_preprocess_comment(&$variables) {
 /* -- Delete this line if you want to use this function
 function carapace_preprocess_block(&$variables) {
 }
-// */
+ */
