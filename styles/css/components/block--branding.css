@@ -11,13 +11,15 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
-.site-branding__text, .site-branding__name, .site-branding__slogan {
+.site-branding__text,
+.site-branding__name,
+.site-branding__slogan {
   display: block;
 }
 
@@ -31,10 +33,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   margin: 0;
 }
 
@@ -54,7 +56,8 @@
   margin-right: -0.2em;
 }
 
-.site-branding__name-link:hover, .site-branding__name-link:focus {
+.site-branding__name-link:hover,
+.site-branding__name-link:focus {
   text-decoration: none;
 }
 

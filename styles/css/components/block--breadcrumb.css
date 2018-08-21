@@ -25,7 +25,9 @@
   display: inline-block;
 }
 
-.breadcrumb__title, .breadcrumb__list, .breadcrumb__list-item {
+.breadcrumb__title,
+.breadcrumb__list,
+.breadcrumb__list-item {
   margin: 0;
   padding: 0;
 }
@@ -74,7 +76,8 @@
   display: block;
 }
 
-.is-vertical .breadcrumb__title:before, .is-vertical .breadcrumb__list-item:before {
+.is-vertical .breadcrumb__title:before,
+.is-vertical .breadcrumb__list-item:before {
   display: inline-block;
   text-align: left;
   margin-right: 0.5rem;
@@ -104,7 +107,9 @@
 }
 
 @media all and (min-width: 60.063em) {
-  .no-js .breadcrumb__title, .no-js .breadcrumb__list, .no-js .breadcrumb__list-item {
+  .no-js .breadcrumb__title,
+  .no-js .breadcrumb__list,
+  .no-js .breadcrumb__list-item {
     display: inline-block;
   }
   .no-js .breadcrumb__list-item:first-child:before {

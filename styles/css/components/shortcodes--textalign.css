@@ -16,11 +16,10 @@
   text-align: right;
 }
 
-.ta-justify
-.ta-justify * {
+.ta-justify .ta-justify * {
   text-align: justify;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 /*# sourceMappingURL=shortcodes--textalign.css.map */

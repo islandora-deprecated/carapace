@@ -1,12 +1,13 @@
 <?php
 
 /**
+ * @file
  * Lists available color schemes for Carapace.
  */
 
-$info = array(
+$info = [
   // Fields.
-  'fields' => array(
+  'fields' => [
     'base'                      => t('Base'),
     'text'                      => t('Text color'),
     'textbackground'            => t('Text highlights'),
@@ -29,12 +30,12 @@ $info = array(
     'sidebarblockbodybg'        => t('Sidebar block body'),
     'buttontx'                  => t('Button text'),
     'buttonbg'                  => t('Button background'),
-  ),
+  ],
   // Schemes.
-  'schemes' => array(
-    'default' => array(
+  'schemes' => [
+    'default' => [
       'title' => t('carapace (default)'),
-      'colors' => array(
+      'colors' => [
         'base'                              => '#140404',
         'text'                              => '#5d5d5d',
         'textbackground'                    => '#ededed',
@@ -57,11 +58,11 @@ $info = array(
         'sidebarblockbodybg'                => '#f0f0f0',
         'buttontx'                          => '#fcfcfc',
         'buttonbg'                          => '#999999',
-      ),
-    ),
-    'magneto' => array(
+      ],
+    ],
+    'magneto' => [
       'title' => t('Magneto'),
-      'colors' => array(
+      'colors' => [
         'base'                              => '#000000',
         'text'                              => '#404040',
         'textbackground'                    => '#ededed',
@@ -84,11 +85,11 @@ $info = array(
         'sidebarblockbodybg'                => '#f7f7f7',
         'buttontx'                          => '#fcfcfc',
         'buttonbg'                          => '#999999',
-      ),
-    ),
-    'magnium' => array(
+      ],
+    ],
+    'magnium' => [
       'title' => t('Magnium'),
-      'colors' => array(
+      'colors' => [
         'base'                              => '#0b223b',
         'text'                              => '#141414',
         'textbackground'                    => '#ededed',
@@ -111,22 +112,22 @@ $info = array(
         'sidebarblockbodybg'                => '#ffffff',
         'buttontx'                          => '#ffffff',
         'buttonbg'                          => '#17477c',
-      ),
-    ),
-  ),
+      ],
+    ],
+  ],
 
   // CSS files (excluding @import) to rewrite with new color scheme.
-  'css' => array(
+  'css' => [
     'styles/css/components/color.css',
     'styles/css/components/tabs.css',
-  ),
+  ],
 
   // Files to copy.
-  'copy' => array(
+  'copy' => [
     'logo.svg',
     'logo.png',
-  ),
+  ],
 
   // Gradient definitions.
-  'gradients' => array(),
-);
+  'gradients' => [],
+];

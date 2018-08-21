@@ -20,7 +20,7 @@
 
 .messages .container {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .messages__list {

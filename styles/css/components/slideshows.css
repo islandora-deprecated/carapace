@@ -10,11 +10,15 @@
  * Contributing author: Ville Ristimäki (@villeristi)
  * Converted to SCSS syntax for Adaptivetheme by Jeff Burnz.
  */
-.flex-container a:focus, .flex-slider a:focus, .flex-container a:focus, .flex-slider a:focus {
+.flex-container a:focus,
+.flex-slider a:focus,
+.flex-container a:focus,
+.flex-slider a:focus {
   outline: none;
 }
 
-.flex-control-nav, .flex-direction-nav {
+.flex-control-nav,
+.flex-direction-nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -46,7 +50,7 @@
   display: none;
   position: relative;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .no-js .flexslider .slides > li:first-child {
@@ -113,7 +117,7 @@ html[xmlns] .flexslider .slides {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media all and (max-width: 45em) {
@@ -142,7 +146,9 @@ html[xmlns] .flexslider .slides {
   transition: all 0.3s ease-in-out;
 }
 
-.flex-direction-nav a:hover, .flex-direction-nav a:focus, .flex-direction-nav a:active {
+.flex-direction-nav a:hover,
+.flex-direction-nav a:focus,
+.flex-direction-nav a:active {
   background-color: transparent;
   color: transparent;
   border: 0;
@@ -245,7 +251,7 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
   text-indent: -9999px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 

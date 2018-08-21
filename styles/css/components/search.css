@@ -10,7 +10,7 @@
 @media all and (min-width: 60.063em) {
   .pr-navbar .block-search {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
   }
   .pr-navbar .block-search .form-search {
     width: 6.25rem;
@@ -18,13 +18,14 @@
     -o-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: 0.2s;
-         -o-transition-duration: 0.2s;
-            transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
     -webkit-transition-timing-function: ease-out;
-         -o-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
   }
-  .pr-navbar .block-search .form-search:hover, .pr-navbar .block-search .form-search:focus {
+  .pr-navbar .block-search .form-search:hover,
+  .pr-navbar .block-search .form-search:focus {
     width: 9.375rem;
   }
 }

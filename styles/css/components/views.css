@@ -29,8 +29,8 @@
   }
   .views-view-grid.horizontal .views-col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     padding: 0 0.625em;
   }
 }
@@ -45,8 +45,8 @@
   }
   .views-view-grid.vertical .views-col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     padding: 0 0.625em;
   }
 }
@@ -54,55 +54,61 @@
 @media all and (min-width: 45.063em) and (max-width: 60em), all and (min-width: 60.063em) {
   .views-view-grid .views-col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     padding: 0 0.625em;
   }
 }
 
 @media all and (min-width: 45.063em) and (max-width: 60em) {
-  .views-view-grid.cols-2 .views-col, .views-view-grid.cols-4 .views-col, .views-view-grid.cols-5 .views-col {
+  .views-view-grid.cols-2 .views-col,
+  .views-view-grid.cols-4 .views-col,
+  .views-view-grid.cols-5 .views-col {
     -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
   }
-  .views-view-grid.cols-3 .views-col, .views-view-grid.cols-6 .views-col, .views-view-grid.cols-8 .views-col, .views-view-grid.cols-10 .views-col, .views-view-grid.cols-12 .views-col {
+  .views-view-grid.cols-3 .views-col,
+  .views-view-grid.cols-6 .views-col,
+  .views-view-grid.cols-8 .views-col,
+  .views-view-grid.cols-10 .views-col,
+  .views-view-grid.cols-12 .views-col {
     -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
   }
 }
 
 @media all and (min-width: 60.063em) {
   .views-view-grid.cols-2 .views-col {
     -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    flex-basis: 50%;
   }
   .views-view-grid.cols-3 .views-col {
     -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
+    flex-basis: 33.33333%;
   }
   .views-view-grid.cols-4 .views-col {
     -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+    flex-basis: 25%;
   }
   .views-view-grid.cols-6 .views-col {
     -ms-flex-preferred-size: 16.66667%;
-        flex-basis: 16.66667%;
+    flex-basis: 16.66667%;
   }
   .views-view-grid.cols-12 .views-col {
     -ms-flex-preferred-size: 8.33333%;
-        flex-basis: 8.33333%;
+    flex-basis: 8.33333%;
   }
   .views-view-grid.cols-8 .views-col {
     -ms-flex-preferred-size: 12.5%;
-        flex-basis: 12.5%;
+    flex-basis: 12.5%;
   }
   .views-view-grid.cols-5 .views-col {
     -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    flex-basis: 20%;
   }
   .views-view-grid.cols-10 .views-col {
     -ms-flex-preferred-size: 10%;
-        flex-basis: 10%;
+    flex-basis: 10%;
   }
 }
 
@@ -140,7 +146,7 @@
   width: auto;
   position: relative;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 0;
   border-width: 1px;
   border-style: solid;
@@ -157,7 +163,8 @@
   display: inline-block;
 }
 
-.view-empty:not(:empty) .links a[href="/node/add"]:hover, .view-empty:not(:empty) .links a[href="/node/add"]:focus {
+.view-empty:not(:empty) .links a[href="/node/add"]:hover,
+.view-empty:not(:empty) .links a[href="/node/add"]:focus {
   text-decoration: none;
 }
 

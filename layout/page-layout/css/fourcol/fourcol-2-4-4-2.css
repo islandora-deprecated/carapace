@@ -7,6 +7,7 @@
   width: 33.33333%;
 }
 
-.fourcol-2-4-4-2 .arc--4 .l-r:first-child, .fourcol-2-4-4-2 .arc--4 .l-r:last-child {
+.fourcol-2-4-4-2 .arc--4 .l-r:first-child,
+.fourcol-2-4-4-2 .arc--4 .l-r:last-child {
   width: 16.66667%;
 }

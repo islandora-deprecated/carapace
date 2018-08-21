@@ -13,7 +13,8 @@
   clear: both;
 }
 
-.field-node--node-link:before, .field-node--node-link:after {
+.field-node--node-link:before,
+.field-node--node-link:after {
   content: " ";
   display: table;
 }

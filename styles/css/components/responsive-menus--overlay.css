@@ -29,11 +29,12 @@
 .ms-overlay .rm-toggle__link {
   border: 0;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   padding: 0.5rem 1rem;
 }
 
-.ms-overlay .rm-toggle__link:hover, .ms-overlay .rm-toggle__link:focus {
+.ms-overlay .rm-toggle__link:hover,
+.ms-overlay .rm-toggle__link:focus {
   outline: none;
   padding: 0.5rem 1rem;
 }
@@ -42,11 +43,15 @@
   margin-top: 0.1875rem;
 }
 
-.ms-overlay .rm-toggle__link, .ms-overlay .rm-toggle__icon {
+.ms-overlay .rm-toggle__link,
+.ms-overlay .rm-toggle__icon {
   background-color: transparent;
 }
 
-.ms-overlay .rm-toggle__link:hover, .ms-overlay .rm-toggle__link:focus, .ms-overlay .rm-toggle__icon:hover, .ms-overlay .rm-toggle__icon:focus {
+.ms-overlay .rm-toggle__link:hover,
+.ms-overlay .rm-toggle__link:focus,
+.ms-overlay .rm-toggle__icon:hover,
+.ms-overlay .rm-toggle__icon:focus {
   background-color: transparent;
 }
 

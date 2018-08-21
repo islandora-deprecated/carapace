@@ -15,8 +15,8 @@
 
 .ms-dropmenu .rm-block__content .menu .menu {
   -webkit-transition-delay: 25ms;
-       -o-transition-delay: 25ms;
-          transition-delay: 25ms;
+  -o-transition-delay: 25ms;
+  transition-delay: 25ms;
 }
 
 .ms-dropmenu .rm-block__content .menu__item {
@@ -48,11 +48,12 @@
 .ms-dropmenu .rm-block__content .menu-level-1 .menu__item {
   width: auto;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
-.ms-dropmenu .rm-block__content .menu-level-1 .menu__item:hover > .is-child, .ms-dropmenu .rm-block__content .menu-level-1 .menu__item:focus > .is-child {
+.ms-dropmenu .rm-block__content .menu-level-1 .menu__item:hover > .is-child,
+.ms-dropmenu .rm-block__content .menu-level-1 .menu__item:focus > .is-child {
   visibility: visible;
   opacity: 1;
 }
@@ -90,7 +91,8 @@
   width: 100%;
 }
 
-.ms-dropmenu .rm-block__content .is-child:hover, .ms-dropmenu .rm-block__content .is-child:focus {
+.ms-dropmenu .rm-block__content .is-child:hover,
+.ms-dropmenu .rm-block__content .is-child:focus {
   visibility: visible;
   opacity: 1;
 }

@@ -15,7 +15,8 @@
   padding: 0;
 }
 
-.tabs ul:before, .tabs ul:after {
+.tabs ul:before,
+.tabs ul:after {
   content: " ";
   display: table;
 }
@@ -62,13 +63,17 @@
   transition: all, 0.2s, ease-in-out;
 }
 
-.tabs .is-vertical ul.tabs--primary li a:link, .tabs .is-vertical ul.tabs--primary li a:visited {
+.tabs .is-vertical ul.tabs--primary li a:link,
+.tabs .is-vertical ul.tabs--primary li a:visited {
   color: #fcfcfc;
   background-color: #999999;
   border-color: #999999;
 }
 
-.tabs .is-vertical ul.tabs--primary li a:hover, .tabs .is-vertical ul.tabs--primary li a:focus, .tabs .is-vertical ul.tabs--primary li a:active, .tabs .is-vertical ul.tabs--primary li a.active {
+.tabs .is-vertical ul.tabs--primary li a:hover,
+.tabs .is-vertical ul.tabs--primary li a:focus,
+.tabs .is-vertical ul.tabs--primary li a:active,
+.tabs .is-vertical ul.tabs--primary li a.active {
   color: #fcfcfc;
   background-color: #999999;
   border-color: #999999;
@@ -78,7 +83,8 @@
   text-align: left;
 }
 
-.tabs .is-vertical ul.tabs--secondary:before, .tabs .is-vertical ul.tabs--secondary:after {
+.tabs .is-vertical ul.tabs--secondary:before,
+.tabs .is-vertical ul.tabs--secondary:after {
   content: " ";
   display: table;
 }
@@ -103,17 +109,22 @@
   padding: 0.75rem 1rem 0.5rem 0.875rem;
 }
 
-.tabs .is-vertical ul.tabs--secondary a:hover, .tabs .is-vertical ul.tabs--secondary a:focus {
+.tabs .is-vertical ul.tabs--secondary a:hover,
+.tabs .is-vertical ul.tabs--secondary a:focus {
   text-decoration: none;
   color: #404040;
   border-bottom: 1px solid #cccccc;
 }
 
-.tabs .is-vertical ul.tabs--secondary a.active, .tabs .is-vertical ul.tabs--secondary a.is-active {
+.tabs .is-vertical ul.tabs--secondary a.active,
+.tabs .is-vertical ul.tabs--secondary a.is-active {
   border-bottom: 1px solid #cccccc;
 }
 
-.tabs .is-vertical ul.tabs--secondary a.active:hover, .tabs .is-vertical ul.tabs--secondary a.active:focus, .tabs .is-vertical ul.tabs--secondary a.is-active:hover, .tabs .is-vertical ul.tabs--secondary a.is-active:focus {
+.tabs .is-vertical ul.tabs--secondary a.active:hover,
+.tabs .is-vertical ul.tabs--secondary a.active:focus,
+.tabs .is-vertical ul.tabs--secondary a.is-active:hover,
+.tabs .is-vertical ul.tabs--secondary a.is-active:focus {
   color: #404040;
 }
 
@@ -124,12 +135,12 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   white-space: nowrap;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .tabs .is-horizontal ul.tabs--primary li {
@@ -167,19 +178,24 @@
   margin-right: -1px;
 }
 
-.tabs .is-horizontal ul.tabs--primary a:hover, .tabs .is-horizontal ul.tabs--primary a:focus {
+.tabs .is-horizontal ul.tabs--primary a:hover,
+.tabs .is-horizontal ul.tabs--primary a:focus {
   color: #404040;
   background-color: #ededed;
   text-decoration: none;
 }
 
-.tabs .is-horizontal ul.tabs--primary a.active, .tabs .is-horizontal ul.tabs--primary a.is-active {
+.tabs .is-horizontal ul.tabs--primary a.active,
+.tabs .is-horizontal ul.tabs--primary a.is-active {
   color: #404040;
   background: none;
   border-bottom-color: #ffffff;
 }
 
-.tabs .is-horizontal ul.tabs--primary a.active:hover, .tabs .is-horizontal ul.tabs--primary a.active:focus, .tabs .is-horizontal ul.tabs--primary a.is-active:hover, .tabs .is-horizontal ul.tabs--primary a.is-active:focus {
+.tabs .is-horizontal ul.tabs--primary a.active:hover,
+.tabs .is-horizontal ul.tabs--primary a.active:focus,
+.tabs .is-horizontal ul.tabs--primary a.is-active:hover,
+.tabs .is-horizontal ul.tabs--primary a.is-active:focus {
   color: #404040;
   background: none;
 }
@@ -190,8 +206,8 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding: 0;
 }
 
@@ -217,17 +233,22 @@
   margin-right: 1rem;
 }
 
-.tabs .is-horizontal ul.tabs--secondary a:hover, .tabs .is-horizontal ul.tabs--secondary a:focus {
+.tabs .is-horizontal ul.tabs--secondary a:hover,
+.tabs .is-horizontal ul.tabs--secondary a:focus {
   text-decoration: none;
   color: #404040;
   border-bottom: 1px solid #cccccc;
 }
 
-.tabs .is-horizontal ul.tabs--secondary a.active, .tabs .is-horizontal ul.tabs--secondary a.is-active {
+.tabs .is-horizontal ul.tabs--secondary a.active,
+.tabs .is-horizontal ul.tabs--secondary a.is-active {
   border-bottom: 1px solid #cccccc;
 }
 
-.tabs .is-horizontal ul.tabs--secondary a.active:hover, .tabs .is-horizontal ul.tabs--secondary a.active:focus, .tabs .is-horizontal ul.tabs--secondary a.is-active:hover, .tabs .is-horizontal ul.tabs--secondary a.is-active:focus {
+.tabs .is-horizontal ul.tabs--secondary a.active:hover,
+.tabs .is-horizontal ul.tabs--secondary a.active:focus,
+.tabs .is-horizontal ul.tabs--secondary a.is-active:hover,
+.tabs .is-horizontal ul.tabs--secondary a.is-active:focus {
   color: #404040;
 }
 
@@ -261,12 +282,16 @@
     -o-transition: all, 0.2s, ease-in-out;
     transition: all, 0.2s, ease-in-out;
   }
-  .no-js .tabs ul.tabs--primary li a:link, .no-js .tabs ul.tabs--primary li a:visited {
+  .no-js .tabs ul.tabs--primary li a:link,
+  .no-js .tabs ul.tabs--primary li a:visited {
     color: #fcfcfc;
     background-color: #999999;
     border-color: #999999;
   }
-  .no-js .tabs ul.tabs--primary li a:hover, .no-js .tabs ul.tabs--primary li a:focus, .no-js .tabs ul.tabs--primary li a:active, .no-js .tabs ul.tabs--primary li a.active {
+  .no-js .tabs ul.tabs--primary li a:hover,
+  .no-js .tabs ul.tabs--primary li a:focus,
+  .no-js .tabs ul.tabs--primary li a:active,
+  .no-js .tabs ul.tabs--primary li a.active {
     color: #fcfcfc;
     background-color: #999999;
     border-color: #999999;
@@ -274,7 +299,8 @@
   .no-js .tabs ul.tabs--secondary {
     text-align: left;
   }
-  .no-js .tabs ul.tabs--secondary:before, .no-js .tabs ul.tabs--secondary:after {
+  .no-js .tabs ul.tabs--secondary:before,
+  .no-js .tabs ul.tabs--secondary:after {
     content: " ";
     display: table;
   }
@@ -295,15 +321,20 @@
     transition: all, 0.2s, ease-in-out;
     padding: 0.75rem 1rem 0.5rem 0.875rem;
   }
-  .no-js .tabs ul.tabs--secondary a:hover, .no-js .tabs ul.tabs--secondary a:focus {
+  .no-js .tabs ul.tabs--secondary a:hover,
+  .no-js .tabs ul.tabs--secondary a:focus {
     text-decoration: none;
     color: #404040;
     border-bottom: 1px solid #cccccc;
   }
-  .no-js .tabs ul.tabs--secondary a.active, .no-js .tabs ul.tabs--secondary a.is-active {
+  .no-js .tabs ul.tabs--secondary a.active,
+  .no-js .tabs ul.tabs--secondary a.is-active {
     border-bottom: 1px solid #cccccc;
   }
-  .no-js .tabs ul.tabs--secondary a.active:hover, .no-js .tabs ul.tabs--secondary a.active:focus, .no-js .tabs ul.tabs--secondary a.is-active:hover, .no-js .tabs ul.tabs--secondary a.is-active:focus {
+  .no-js .tabs ul.tabs--secondary a.active:hover,
+  .no-js .tabs ul.tabs--secondary a.active:focus,
+  .no-js .tabs ul.tabs--secondary a.is-active:hover,
+  .no-js .tabs ul.tabs--secondary a.is-active:focus {
     color: #404040;
   }
 }
@@ -316,12 +347,12 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     white-space: nowrap;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
   .no-js .tabs ul.tabs--primary li {
     margin: 0 0 0 0;
@@ -352,17 +383,22 @@
     transition: background-color, .15s, ease-in-out;
     margin-right: -1px;
   }
-  .no-js .tabs ul.tabs--primary a:hover, .no-js .tabs ul.tabs--primary a:focus {
+  .no-js .tabs ul.tabs--primary a:hover,
+  .no-js .tabs ul.tabs--primary a:focus {
     color: #404040;
     background-color: #ededed;
     text-decoration: none;
   }
-  .no-js .tabs ul.tabs--primary a.active, .no-js .tabs ul.tabs--primary a.is-active {
+  .no-js .tabs ul.tabs--primary a.active,
+  .no-js .tabs ul.tabs--primary a.is-active {
     color: #404040;
     background: none;
     border-bottom-color: #ffffff;
   }
-  .no-js .tabs ul.tabs--primary a.active:hover, .no-js .tabs ul.tabs--primary a.active:focus, .no-js .tabs ul.tabs--primary a.is-active:hover, .no-js .tabs ul.tabs--primary a.is-active:focus {
+  .no-js .tabs ul.tabs--primary a.active:hover,
+  .no-js .tabs ul.tabs--primary a.active:focus,
+  .no-js .tabs ul.tabs--primary a.is-active:hover,
+  .no-js .tabs ul.tabs--primary a.is-active:focus {
     color: #404040;
     background: none;
   }
@@ -372,8 +408,8 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     padding: 0;
   }
   .no-js .tabs ul.tabs--secondary li {
@@ -395,15 +431,20 @@
     padding: 1rem 0.5rem 0.625rem;
     margin-right: 1rem;
   }
-  .no-js .tabs ul.tabs--secondary a:hover, .no-js .tabs ul.tabs--secondary a:focus {
+  .no-js .tabs ul.tabs--secondary a:hover,
+  .no-js .tabs ul.tabs--secondary a:focus {
     text-decoration: none;
     color: #404040;
     border-bottom: 1px solid #cccccc;
   }
-  .no-js .tabs ul.tabs--secondary a.active, .no-js .tabs ul.tabs--secondary a.is-active {
+  .no-js .tabs ul.tabs--secondary a.active,
+  .no-js .tabs ul.tabs--secondary a.is-active {
     border-bottom: 1px solid #cccccc;
   }
-  .no-js .tabs ul.tabs--secondary a.active:hover, .no-js .tabs ul.tabs--secondary a.active:focus, .no-js .tabs ul.tabs--secondary a.is-active:hover, .no-js .tabs ul.tabs--secondary a.is-active:focus {
+  .no-js .tabs ul.tabs--secondary a.active:hover,
+  .no-js .tabs ul.tabs--secondary a.active:focus,
+  .no-js .tabs ul.tabs--secondary a.is-active:hover,
+  .no-js .tabs ul.tabs--secondary a.is-active:focus {
     color: #404040;
   }
 }

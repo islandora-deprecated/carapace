@@ -22,7 +22,7 @@ textarea {
   background-color: inherit !important;
   color: inherit !important;
   -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
   background-image: none !important;
   visibility: visible;
   opacity: 1;

@@ -62,7 +62,10 @@
   margin: 0;
 }
 
-.rm-toggle__link, .rm-toggle__link:hover, .rm-toggle__link:focus, .rm-toggle__link:active {
+.rm-toggle__link,
+.rm-toggle__link:hover,
+.rm-toggle__link:focus,
+.rm-toggle__link:active {
   padding: 0.75rem 1rem 0.5rem;
   border-radius: 0;
   cursor: pointer;
@@ -112,7 +115,8 @@
   border: 0;
 }
 
-.rm-block__content .menu__link:hover, .rm-block__content .menu__link:focus {
+.rm-block__content .menu__link:hover,
+.rm-block__content .menu__link:focus {
   text-decoration: none;
 }
 

@@ -15,9 +15,7 @@
  * you don't need to include these on your own site.
  */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto);
-
-body {
+@import url(http://fonts.googleapis.com/css?family=Roboto); body {
   margin: 0;
   padding: 40px 0 0 0;
   font-family: sans-serif;
@@ -85,14 +83,14 @@ hr {
 }
 
 .browsehappy {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 1em;
-    background: black;
-    color: white;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1em;
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 img {
@@ -100,12 +98,12 @@ img {
 }
 
 small {
-    display: block;
+  display: block;
 }
 
 p,
 [class^="hvr-"] {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 [class^="hvr-"] {
@@ -126,28 +124,28 @@ p,
 }
 
 .sup {
-    vertical-align: super;
-    margin-left: -1em;
-    padding: .21875em;
-    line-height: 100%;
-    font-size: .21875em;
-    border: #eee solid 1px;
-    border-radius: 4px;
-    color: inherit;
+  vertical-align: super;
+  margin-left: -1em;
+  padding: .21875em;
+  line-height: 100%;
+  font-size: .21875em;
+  border: #eee solid 1px;
+  border-radius: 4px;
+  color: inherit;
 }
 
 .sup:hover {
-    background: #eee;
+  background: #eee;
 }
 
 a {
-    color: #2098D1;
-    text-decoration: none;
+  color: #2098d1;
+  text-decoration: none;
 }
 
 .footer a:hover,
 .nav:hover {
-    color: #207AD1;
+  color: #207ad1;
 }
 
 .nav {
@@ -181,7 +179,7 @@ a {
   position: relative;
   margin: 1.2em 0 1em 0;
   padding: 1em;
-  background: #2098D1;
+  background: #2098d1;
   border: none;
   text-decoration: none;
   font-weight: 700;
@@ -236,13 +234,13 @@ h3 {
 }
 
 .twitter-follow-button {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .follow {
-    margin-bottom: 20px;
-    line-height: 200%;
+  margin-bottom: 20px;
+  line-height: 200%;
 }
 
 .made-by {
@@ -286,7 +284,7 @@ h3 {
 .made-by a {
   display: inline-block;
   padding: 0 .125em;
-  color: #B1B1B1;
+  color: #b1b1b1;
   transition-duration: .2s;
   transition-property: color;
 }
@@ -375,7 +373,7 @@ h3 {
 }
 
 #forkongithub {
-    display: none;
+  display: none;
 }
 
 #forkongithub a {
@@ -396,7 +394,7 @@ h3 {
 #forkongithub a:hover,
 #forkongithub a:focus,
 #forkongithub a:active {
-  background: #2098D1;
+  background: #2098d1;
   color: #fff;
 }
 

@@ -1,10 +1,22 @@
 @media all and (max-width: 45em) {
-  #block-carapace-search, .block-plugin-id--carapace-search {display:none}
-  #block-searchform, .block-plugin-id--searchform {display:block}
+  #block-carapace-search,
+  .block-plugin-id--carapace-search {
+    display: none
+}
+  #block-searchform,
+  .block-plugin-id--searchform {
+    display: block
+}
 }
 @media all and (min-width: 45.0625em) and (max-width: 60em) {
-  #block-searchform, .block-plugin-id--searchform {display:none}
+  #block-searchform,
+  .block-plugin-id--searchform {
+    display: none
+}
 }
 @media all and (min-width: 60.0625em) {
-  #block-searchform, .block-plugin-id--searchform {display:none}
+  #block-searchform,
+  .block-plugin-id--searchform {
+    display: none
+}
 }
