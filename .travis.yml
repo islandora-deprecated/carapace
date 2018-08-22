@@ -27,7 +27,7 @@ install:
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
-  - phpcs --standard=Drupal --ignore=*.md --extensions=php,module,inc,install,test,profile,theme,css,info $TRAVIS_BUILD_DIR
+  - phpcs --standard=Drupal --ignore='*.md,*-min.css' --extensions=php,module,inc,install,test,profile,theme,css,info $TRAVIS_BUILD_DIR
   - phpcpd --names *.module,*.inc,*.test,*.php $TRAVIS_BUILD_DIR
 
 notifications:
