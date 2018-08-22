@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - user
@@ -7,8 +7,8 @@ dependencies:
     - carapace
 id: carapace_login
 theme: carapace
-region: sidebar_second
-weight: 20
+region: '-1'
+weight: -6
 provider: null
 plugin: user_login_block
 settings:

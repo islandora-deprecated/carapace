@@ -5,16 +5,14 @@
 // Region or row specific menu overrides
 .pr-footer__footer {
 
-  .block-menu {}
-
-  .menu-level-1 {
-    @include list-horizontal($flow-from, $margin: (t: $x-small, r: $medium, b: $x-small, l: 0), $list-item-selector: '.menu__item');
+  .block-menu {
+    @include cfm;
   }
 
-  .menu a:after {
-    content: none;
+  @include list-horizontal($flow-from, $margin: (t: $x-small, r: $medium, b: $x-small, l: 0), $list-item-selector: '.menu__item');
+
+  .block__content .menu__link:after {
     display: none;
   }
 }
-
 

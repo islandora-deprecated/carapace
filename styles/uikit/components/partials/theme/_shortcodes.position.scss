@@ -15,22 +15,6 @@
   transform: translateY(-50%);
 }
 
-// We need robust styles for pull classes because they may be overridden, for
-// example by Font Awesome.
-@media #{$mobile} {
-  .pull-right,
-  [dir="rtl"] .pull-left,
-  .pull-left,
-  [dir="rtl"] .pull-right {
-    float: none;
-    right: auto;
-    left: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
-
 @media #{$wide} {
   .pull-right,
   [dir="rtl"] .pull-left {

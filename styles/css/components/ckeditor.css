@@ -5,6 +5,7 @@
  * This file loads as an library override of Stable, see the info.yml file.
  ============================================================================ */
 .cke_chrome {
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: 1px solid !important;
   border-top: 1px solid !important;
@@ -12,12 +13,14 @@
 }
 
 .cke_top {
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border-bottom: 1px solid !important;
   background-image: none !important;
 }
 
 .cke_bottom {
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border-top: 1px solid !important;
   background-image: none !important;

@@ -8,7 +8,7 @@
 
 .ms-accordion {
 
-  a {
+  .menu__link {
     &:hover,
     &:focus {
       outline: 0;
@@ -16,7 +16,7 @@
   }
 
   .is-parent {
-    a {
+    .menu__link {
       @include output-rhythm(margin-#{$flow-from}, 40px);
     }
   }
@@ -27,17 +27,15 @@
   }
 
   .rm-accordion-trigger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     position: absolute;
     #{$flow-from}: 0;
-    top: 0;
+    top :0;
     border-radius: 0;
     border: 0;
     margin: 0;
     height: 100%;
-    @include output-rhythm(width, 36px);
+    @include output-rhythm(max-width, 36px);
 
     &:hover,
     &:focus {
@@ -55,9 +53,11 @@
   .rm-accordion-trigger__icon {
     border-radius: 0;
     border: 0;
-    padding: 0;
-    margin: auto;
+    box-sizing: content-box;
     @include output-rhythm(width, $medium);
+    @include output-rhythm(padding, 10px);
+    margin: 0;
+    vertical-align: middle;
   }
 
   .is-child {

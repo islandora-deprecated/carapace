@@ -1,16 +1,10 @@
 /**
- * Colors
- * - Add or modify colors for all theme elements.
- * - Most colors are set in _variables.scss where you can make global changes
- *   without touching this file at all.
- * - If your theme is using the Color module be very careful about what you
- *   change in this file, or in the global _variables.scss file, the color
- *   schemes expect certain hex values to exist in the color.css file - it is
- *   safer to place colors in a partial that is not parsed by the Color module.
+ * Color
  ============================================================================ */
 
+
 /**
- * base.elements
+ * Base
  ============================================================================ */
 
 // Background for offcanvas menus goes on html so CKEditor does not inherit
@@ -25,13 +19,12 @@ body {
   color: $text-color;
 }
 
-
 // Links.
 a {
   color: $link-color;
 
   &:visited {
-    color: $link-color; // or use $link-visited-color
+    //color: $link-color; // or use $link-visited-color
   }
 
   &:active,
@@ -49,6 +42,7 @@ a {
 // Blockquotes, Bootstrap style.
 blockquote {
   border-color: $border-color; // LTR
+  //color: $text-color-light;
 
   p {
     &:first-child {
@@ -64,7 +58,7 @@ blockquote {
 
   // Float right with text-align: right
   &.pull-right {
-    border-#{$flow-to}-color: $border-color; // TODO check interpolation is OK
+    border-#{$flow-to}-color: $border-color; // TODO check concatenation is OK
   }
 }
 
@@ -86,22 +80,6 @@ hr {
 
 ::selection {
   background-color: $selection-color;
-}
-
-
-// Stylise strike-through text.
-del {
-  color: $text-color-medium;
-}
-
-
-// Code related tags.
-code,
-pre,
-var,
-kbd,
-samp {
-  background: $text-background-color-light;
 }
 
 
@@ -144,7 +122,7 @@ samp {
 }
 
 .#{$fa-css-prefix}-trans-white-50 {
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.25);;
 }
 
 .#{$fa-css-prefix}-trans-white-75 {
@@ -156,7 +134,7 @@ samp {
 }
 
 .#{$fa-css-prefix}-trans-black-50 {
-  color: rgba(0, 0, 0, 0.50);
+  color: rgba(0, 0, 0, 0.25);;
 }
 
 .#{$fa-css-prefix}-trans-black-75 {
@@ -180,15 +158,31 @@ samp {
 //  - .regions is the main wrapper selector for all regions within a page.
 .regions {
   background-color: $regions-background-color;
+  border-color: $regions-background-color;
+  box-shadow: 4px 11px 16px 1px rgba(0, 0, 0, .1), -4px 11px 16px 1px rgba(0, 0, 0, .1);
 }
 
 
 //  Page Rows - these match the Site Builder layout.
 
 // Leaderboard
-.pr-leaderboard {    // Outer wrapper.
-  &__rw {}           // Regions wrapper (container that takes max-width from your layout settings).
-  &__leaderboard {}  // Region.
+.pr-leaderboard {
+  &__rw {
+    color: $page-leaderboard-color;
+    background-color: $page-leaderboard-background-color;
+  }
+
+  .block__content a {
+    color: inherit;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  &__leaderboard {}
 }
 
 
@@ -208,12 +202,26 @@ samp {
   color: $page-navbar-color;
   @include page-row-background-color($page-navbar-background-color, $page-row-fullwidth);
 
-  .menu a {
+  .menu a,
+  .block__content a {
     color: inherit;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
   }
+
 
   &__rw {}
   &__navbar {}
+
+
+
+  .block-search {
+    background-color: $regions-background-color;
+  }
 }
 
 
@@ -247,9 +255,29 @@ samp {
 .pr-main {
   &__rw {}
   &__content {}
-  &__sidebar-first {}
-  &__sidebar-second {}
+
+  &__sidebar-first,
+  &__sidebar-second {
+    .block.has-title {
+      .block__title {
+        background-color: $sidebar-block-header-background-color;
+      }
+
+      .block__content {
+        background-color: $sidebar-block-body-background-color;
+      }
+    }
+
+    .block-search .block__content {
+      background-color: transparent;
+    }
+  }
 }
+
+//$sidebar-block-header-background-color : #e0e0e0;
+//$sidebar-block-header-color            : $text-color;
+//$sidebar-block-body-background-color   : #ebebeb;
+//$sidebar-block-body-color              : $text-color;
 
 
 // Content suffix
@@ -272,12 +300,24 @@ samp {
 }
 
 
-// Footer
+// Footer cols
+.pr-footercols {
+  &__rw {}
+  &__footercol-first {}
+  &__footercol-second {}
+  &__footercol-third {}
+  &__footercol-fourth {}
+  &__footercol-fifth {}
+}
+
+
+// Footer + Footer cols
+.pr-footercols,
 .pr-footer {
   color: $page-footer-color;
   @include page-row-background-color($page-footer-background-color, $page-row-fullwidth);
 
-  .menu a {
+  .block__content a {
     color: inherit;
 
     &.active,
@@ -292,12 +332,12 @@ samp {
 }
 
 
+
 /**
  * AT attribution message
  *  - a toggle setting in the theme settings, you can turn it on/off using
  *    the Markup overrides extension.
  ============================================================================ */
-
 .attribution {
   .l-rw {
     background-color: transparent;
@@ -312,9 +352,8 @@ samp {
  * Feed Icons
  *  - icons are SVG, SEE feed-icon.html.twig in AT Core templates directory.
  ============================================================================ */
-
 .feed-icon-rss__path {
-  fill: rgba(0, 0, 0, 0.6);
+  fill: $feed-icon-fill;
 }
 
 
@@ -325,23 +364,45 @@ samp {
 
 .block--system-branding-block {}
 
-.site-branding-text {}
+.site-branding {
 
-.site-branding__name-link {
-  &:link,
-  &:visited {
-    color: $text-color-medium;
+  &__text,
+  &__name,
+  &__slogan {
   }
 
-  &:hover,
-  &:active {
-    color: $text-color;
+  // link around the logo image
+  &__logo-link {}
+
+  // logo image
+  &__logo-img {}
+
+  // wrapper around site name and slogan (byline)
+  &__text {}
+
+  // site name
+  &__name {
+    &__word-count--1 {}
+    &__word-count--2 {}
+
+    &__word--at {
+      color: #999999;
+    }
   }
+
+  // site name link
+  &__name-link {
+    color: $site-name;
+
+    &:hover,
+    &:focus {
+      color: $site-name;
+    }
+  }
+
+  // site slogan
+  &__slogan {}
 }
-
-.site-logo {}
-.site-name {}
-.site-slogan {}
 
 
 /**
@@ -352,6 +413,28 @@ samp {
 .block__title {}
 
 
+// Custom blocks
+.block-advt {
+  background: rgba(0, 0, 0, 0.6);
+
+  .field,
+  a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/**
+ * Styles for Twitter block module blocks:
+ * https://www.drupal.org/project/twitter_block
+ ============================================================================ */
+
+// Wrapper
+.block-config-provider--twitter-block {
+  background-color: $text-background-color-light;
+}
+
+
+
 /**
  * Menus
  *  - style Drupal core block menus.
@@ -360,26 +443,10 @@ samp {
  ============================================================================ */
 
 .menu {
-  a {
-    color: $menu-color;
-    border-color: $border-color;
-    //background-color: $menu-background-color;
-
-    &:hover,
-    &:focus {
-      color: $menu-hover-color;
-      //background-color: $menu-background-hover-color;
-    }
-
-    &.active {
-      color: $menu-active-color;
-      //background-color: $menu-background-active-color;
-    }
-  }
-
+  &__link {}
   // Nested menus.
   .menu {
-    a {
+    &__link {
       &:hover,
       &:focus {}
       &.active-trail {}
@@ -388,7 +455,7 @@ samp {
 }
 
 .menu__item {
-  &--active-trail > a {
+  &--active-trail > .menu__link {
     //color: $menu-active-color;
     //background-color: $menu-background-active-color;
   }
@@ -397,15 +464,39 @@ samp {
   @if $menu-arrows == true {
     &--collapsed,
     &--expanded {
-      > a:after {
+      > .menu__link:after {
         //color: $text-color;
       }
     }
   }
 
   // Add the border top to the first item only.
-  &:first-child a {
+  &:first-child .menu__link {
     border-color: $border-color;
+  }
+}
+
+.menu .menu__link {
+  color: $menu-color;
+  border-color: $border-color;
+  //background-color: $menu-background-color;
+
+  &:hover,
+  &:focus {
+    color: $menu-hover-color;
+    //background-color: $menu-background-hover-color;
+  }
+
+  &.active {
+    color: $menu-active-color;
+    //background-color: $menu-background-active-color;
+  }
+
+  // Border transition.
+  &:not(.button):not([class*="toolbar"]) {
+    &:before {
+      background-color: $link-color;
+    }
   }
 }
 
@@ -436,8 +527,9 @@ samp {
  * Responsive styles are a combination of three things:
  *  1. Sass/CSS defined here (with breakpoints etc).
  *  2. jQuery: responsive-menus.js in AT Core libraries which adds/toggles classes.
- *  3. Theme settings as set in your themes Advanced extension settings.
+ *  3. Theme settings as set in your themes Advanced extention settings.
  ============================================================================ */
+
 
 // Provide a consistent style for visible click handles.
 .rm-toggle {
@@ -464,7 +556,7 @@ samp {
 .ms-tiles {
   .rm-block__content {
     .menu {
-      a,
+      .menu__link,
       .rm-accordion-trigger {
         color: $resp-menu-color;
         background-color: $resp-menu-background-color;
@@ -476,7 +568,7 @@ samp {
         }
       }
 
-      a.is-active {
+      .menu__link.is-active {
         color: $resp-menu-active-color ;
         background-color: $resp-menu-active-background-color;
 
@@ -504,23 +596,26 @@ samp {
 .ms-slidedown {
   .rm-row,
   .rm-region {
-    background-color: $slidedown-background-color;
+    background-color: $page-background-color;
+  }
+
+  .rm-block__content {
+    background-color: $regions-background-color;
   }
 }
 
 
-.ms-dropmenu,
-.ms-horizontal {
+.ms-dropmenu {
   .rm-block__content {
     .menu-level-1 {
-      > li > span > a {
+      > li > span > .menu__link {
         color: inherit;
         background-color: transparent;
 
         &:hover,
         &:focus {
           color: $resp-menu-hover-color;
-          background-color: $resp-menu-hover-background-color;
+          //background-color: $resp-menu-hover-background-color;
         }
 
         &.is-active {
@@ -534,7 +629,7 @@ samp {
             &:hover,
             &:focus {
               color: $resp-menu-hover-color;
-              background-color: $resp-menu-hover-background-color;
+              //background-color: $resp-menu-hover-background-color;
             }
           }
         }
@@ -542,7 +637,7 @@ samp {
     }
 
     .menu-level-2 {
-      a {
+      .menu__link {
         color: $resp-menu-color;
         background-color: $resp-menu-background-color;
 
@@ -599,7 +694,7 @@ samp {
     .menu {
       background-color: transparent;
 
-      a {
+      .menu__link {
         color: white;
         background-color: rgba(0, 0, 0, 0.95);
 
@@ -641,7 +736,7 @@ samp {
 .ms-meganav {
   .rm-block__content {
     .menu {
-      a {
+      .menu__link {
         color: inherit;
         background-color: transparent;
 
@@ -664,7 +759,7 @@ samp {
       .menu-level-1 > .menu__item {
         border-bottom: $border-width $border-style $border-color;
 
-        > span > a {
+        > span > .menu__link {
           color: $resp-menu-color;
           background-color: $resp-menu-background-color;
 
@@ -825,6 +920,7 @@ input[type="week"] {
     box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1) ;
   }
 
+
   &:focus {
     border-color: $form-border-color;
     color: $form-text-focus-color;
@@ -909,10 +1005,40 @@ textarea.placeholder_text {
 
     &:focus,
     &:hover {
-      background-color: rgba(255, 255, 255, 0.75);
+      color: $form-text-focus-color;
+      background-color: $form-background-focus-color;
     }
   }
 }
+
+
+// Dialog stuff needs an override to look OK.
+.ui-dialog {
+  .form-text {
+    background-color: inherit !important;
+    color: black !important;
+    border-color: silver !important;
+
+    &::placeholder {
+      color: silver;
+    }
+  }
+
+  .form-type-radio,
+  .form-type-checkbox {
+    label.option {
+      border-color: transparent;
+      background-color: inherit;
+
+      &:focus,
+      &:hover {
+        color: inherit;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
 
 // Filters and tips
 .filter-wrapper {
@@ -982,6 +1108,7 @@ form .marker {
 }
 
 // Panes
+.vertical-tabs__panes,
 .vertical-tabs__pane {
   background-color: $vertical-tabs-selected-color;
 }
@@ -1005,6 +1132,8 @@ button,
   background-color: $button-background-color;
   border-color: $button-border-color;
   opacity: 0.9;
+
+
 
   @if $button-box-shadow == true {
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
@@ -1040,7 +1169,6 @@ button,
 // Danger button, e.g. delete buttons often have this class.
 .button--danger {
   @include button-variant($error-text-color, transparent, false, 0, transparent, none);
-  box-shadow: none;
 }
 
 
@@ -1213,13 +1341,13 @@ button.link-edit-summary {
 
 /**
  * File icons
- * AT un-sets Drupal core file field CSS for image icons and replaces them
+ * AT unsets Drupal core file field CSS for image icons and replaces them
  * with FontAwesome icons.
  ============================================================================ */
 
 .file {
   a:before {
-    color: $text-color-light;
+    color: $text-color;
   }
 }
 
@@ -1331,25 +1459,35 @@ body {
  ============================================================================ */
 
 .node {
-  // $node-teaser-border-color
   background-color: $node-teaser-background-color;
-  box-shadow: $node-teaser-box-shadow;
+
+  .field-node--node-link,
+  &__links {
+    a {
+      color: $node-links-color;
+      background-color: $node-links-background-color;
+
+      &:hover {
+      }
+    }
+  }
 
   // States
   &--promoted {}
 
   &--sticky {
     background-color: transparent;
-    box-shadow: none;
   }
-
-  // View modes
-  &--view-mode-full {}
-  &--view-mode-teaser {}
 
   // Field image borders.
   .field-type-image__item {
     //border-color: $border-color-light;
+  }
+
+  // View modes
+  &--view-mode-full {}
+  &--view-mode-teaser {
+    border-color: $border-color-light;
   }
 }
 
@@ -1378,7 +1516,6 @@ body {
 }
 
 
-
 /**
  * Aggregator
  ============================================================================ */
@@ -1397,7 +1534,7 @@ body {
 .forum {
   .icon {
     svg {
-      fill: rgba(0, 0, 0, 0.5);
+      fill: $text-color-medium;
     }
   }
 }
@@ -1412,9 +1549,6 @@ body {
   box-shadow: $node-teaser-box-shadow;
 }
 
-.search-result__snippet-info {
-  color: $text-color-medium;
-}
 
 
 /**
@@ -1440,7 +1574,7 @@ body {
 .block-social-media-links,
 .pane-social-media-link-widget {
   .platform__link {
-    color: $text-color;
+    color: rgba(255,255,255,0.6);
     opacity: 0.65;
 
     &:hover,
@@ -1484,11 +1618,38 @@ body {
   }
 }
 
+// View Recent content (customized block with DS layout).
+.block .view-content-recent {
+  .node {
+    background: transparent;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+    .field-node--node-title {
+      background: rgba(0, 0, 0, 0.5);
+
+      a {
+        color: rgba(255, 255, 255, 0.9);
+        //text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}
+
+
+// view-frontpage-section-features
+.view-frontpage-section-features {
+  .views-row {
+    border-bottom-color: $border-color-light;
+
+    .bp--at-core-simple-wide &,
+    .bp--at-core-simple-tablet-isolate & {
+    }
+  }
+}
+
 
 /**
  * CKEditor Colors
- * Pretty brutal, but effective, combines with other editor partials and files,
- * mainly for Mimic but will color borders for moono also.
  ============================================================================ */
 
 .cke_chrome {
@@ -1513,7 +1674,7 @@ body {
 .cke_editable,
 textarea.cke_source,
 .cke_combopanel {
-  background-color: $node-background-color !important;
+  background-color: $node-background-color;
   color: $text-color !important;
 }
 
@@ -1524,20 +1685,20 @@ a.cke_button_off {
   &:hover,
   &:focus,
   &:active {
-    background-color: $text-background-color-light !important;
+    background-color: $border-color !important;
     color: $text-color !important;
   }
 }
 
 .cke_combo_on a.cke_combo_button,
 a.cke_button_on {
-  background-color: $text-background-color-light !important;
+  background-color: $border-color !important;
   color: $text-color !important;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $text-background-color-light !important;
+    background-color: $border-color !important;
     color: $text-color !important;
   }
 }
@@ -1574,14 +1735,14 @@ a.cke_button_on {
 
 .cke_panel_listItem {
   &.cke_selected a {
-    background-color: $text-background-color-light !important;
+    background-color: $border-color !important;
   }
 
   a {
     &:hover,
     &:focus,
     &:active {
-      background-color: $text-background-color-light !important;
+      background-color: $border-color !important;
       color: $text-color !important;
     }
   }
@@ -1613,9 +1774,18 @@ input.cke_dialog_ui_input_password {
 
 .ckeditor-dialog-loading,
 .ckeditor-dialog-loading * {
-  background-color: $text-background-color-light !important;
+  background-color: $border-color !important;
   color: $text-color !important;
-  border-color: $border-color-light !important;
+  border-color: $border-color !important;
 }
 
 
+/**
+ * Hover CSS effects
+ ============================================================================ */
+
+.node :not(.field-type-image):not([class*="__title"]) a {
+  &:before {
+    background-color: $link-color;
+  }
+}

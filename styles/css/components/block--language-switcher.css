@@ -1,10 +1,9 @@
 /**
  * Block Language Switcher
  ============================================================================ */
-.language-switcher-language-url .links a,
-.block-config-provider--language .links a {
-  display: block;
-  padding: 0.125rem 0;
-  margin: 0.125rem 0;
+.block-id--block-languageswitcher .links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=block--language-switcher.css.map */

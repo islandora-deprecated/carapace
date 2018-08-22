@@ -29,11 +29,12 @@
 
 // Global styles for the responsive menu row.
 .rm-row {
-  z-index: 100; // Flex alters the z-index, unknown reason...
+  //position: relative;
 }
 
 // Global styles for the responsive menu region.
 .rm-region {
+  padding: 0;
   margin: 0;
 
   // Visually hide contextual links, they can get in the way of responsive menu styles.
@@ -43,26 +44,53 @@
       @include visually-hidden;
     }
   }
+
+  // Required to override position static on contextual links.
+  [class*='is-vertical-'] {
+    position: absolute;
+    z-index: $resp-menu-z-index;
+  }
 }
+
+
+// Remove any rounded corners applied to these menu styles.
+.ms-dropmenu,
+.ms-horizonal,
+.ms-offcanvas,
+.ms-meganav {
+  .rm-block .menu .menu__link {
+    //border-radius: 0 !important;
+  }
+}
+.ms-overlay .block__title {
+  //border-radius: 0 !important;
+}
+
+.ms-vertical {
+  .rm-toggle {
+    display: none;
+  }
+}
+
 
 // Provide a consistent style for visible click handles.
 .rm-toggle  {
-  @include output-rhythm(font-size, $medium);
-  @include output-rhythm(padding, $xxxx-small 0);
+  @include adjust-font-size-to($medium);
+  padding: 0;
   margin: 0;
 
   &__link,
   &__link:hover,
   &__link:focus,
   &__link:active {
-    @include output-rhythm(padding, 8px 16px 4px 12px);
-    height: auto;
+    @include output-rhythm(padding, 12px 16px 8px);
     border-radius: $border-radius;
     cursor: pointer;
   }
 
   &__icon {
     position: relative;
+    //@include output-rhythm(top, 2px);
     @include output-rhythm(height, $medium);
     @include output-rhythm(width, $medium);
   }
@@ -74,20 +102,9 @@
 }
 
 
-// Flex position responsive block.
-.rm-block {
-  line-height: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-
-  &__inner {
-    width: 100%;
-  }
-}
-
-
+// Provide a reasonably consistent menu style across all menu types,
+// you may need to tweak some types due to the differences in layout
+// and overall design of the menu.
 .rm-block__content {
   .menu {
     position: relative;
@@ -100,17 +117,22 @@
 
   &__item {
     position: relative;
-    @include output-rhythm(font-size, $medium); // explicitly set the font-size since the container may be font-size 0
+    vertical-align: middle;
+    @include adjust-font-size-to($medium); // explicitly set the font-size since the container may be font-size 0
 
-    &--active-trail > a {}
+    &--active-trail > .menu__link {}
 
     // Strip border top from nested items.
-    &:first-child a {
+    &:first-child .menu__link {
       border-top: 0;
     }
   }
 
-  a {
+  .menu__link--wrapper {
+    width: 100%;
+  }
+
+  .menu__link {
     transition: $global-transition;
     font-weight: $font-weight-light;
     margin: 0;
@@ -140,7 +162,7 @@
 // No JS?
 .no-js {
   .rm-block {
-    a {
+    .menu__link {
       @include output-rhythm(padding, $xx-small);
       @include output-rhythm(margin, 1px 0);
     }

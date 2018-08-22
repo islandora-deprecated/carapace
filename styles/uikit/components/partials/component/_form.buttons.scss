@@ -40,10 +40,9 @@ button,
 
 
 // Button styles for things that are not actually button elements.
-a.button {
-  display: inline-block;
-  text-align: center;
-  @include output-rhythm(line-height, $form_input_button_select_height);
+.button {
+  display: flex;
+  align-items: center;
 }
 
 

@@ -1,9 +1,58 @@
 @charset "UTF-8";
 /**
+ * Block Search
+ * - SEE _search.forms.scss for detailed classes for block search form.
+ ============================================================================ */
+.pr-navbar .block-search {
+  padding: 0.375rem;
+}
+
+@media all and (min-width: 60.063em) {
+  .pr-navbar .block-search {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .pr-navbar .block-search .form-search {
+    width: 6.25rem;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .pr-navbar .block-search .form-search:hover,
+  .pr-navbar .block-search .form-search:focus {
+    width: 9.375rem;
+  }
+}
+
+@media all and (max-width: 60em) {
+  .pr-navbar .block-search {
+    padding: 0.375rem 0;
+  }
+  .pr-navbar .block-search[class*="pull-"] {
+    float: none;
+  }
+}
+
+@media all and (min-width: 60.063em) {
+  .pr-navbar__rw:not(.rm-row) .block-search {
+    text-align: right;
+  }
+  .pr-navbar__rw .rm-row .block-search {
+    float: right;
+  }
+}
+
+/**
  * Search results.
  ============================================================================ */
 .item-list--search-results {
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .search-results {
@@ -13,10 +62,11 @@
 
 .search-results--empty h3 {
   font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .search-results__item {
-  margin-bottom: 1.625rem;
+  margin-bottom: 1.25rem;
   padding: 0;
   list-style: none;
 }
@@ -27,6 +77,7 @@
 
 .search-result__snippet-info {
   font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 .search-result p {
@@ -42,6 +93,7 @@
   display: block;
   clear: both;
   position: relative;
+  margin: 0;
 }
 
 .search-block-form__form .form-type-search,
@@ -55,7 +107,7 @@
 }
 
 .submit-is-visible .search-block-form__form .form-search {
-  padding-right: 2rem;
+  padding-right: 2.1875rem;
 }
 
 .search-block-form__form .form-actions {
@@ -66,9 +118,6 @@
 }
 
 .search-block-form__form .form-submit {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   margin: 0;
   padding: 0;
   width: 2rem;
@@ -82,8 +131,7 @@
   background-image: url(../images/search-icon.svg);
   background-position: center center;
   background-repeat: no-repeat;
-  border-radius: 0 2px 2px 0;
-  background-size: contain;
+  border-radius: 0 0 0 0;
 }
 
 .search-block-form__form .contextual-render-processed {
@@ -151,6 +199,7 @@
 .search-help-link {
   float: right;
   font-size: 0.875rem;
+  line-height: 1.5rem;
   margin-top: -1.5rem;
   padding-right: 0.375rem;
 }

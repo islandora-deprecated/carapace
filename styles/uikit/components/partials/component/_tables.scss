@@ -4,6 +4,7 @@
  ============================================================================ */
 
 table {
+
   // If for some crazy reason this theme is used in admin, set tables to be
   // 100% width.
   .path-admin & {
@@ -18,7 +19,7 @@ table {
   .view-table__details {
     padding: 0;
     @include output-rhythm(margin, 0 0 $medium);
-    @include output-rhythm(font-size, $medium);
+    @include adjust-font-size-to($medium);
   }
 
   .view-table__details,
@@ -50,6 +51,11 @@ table {
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  // Set responsive enabled tables to full width.
+  &.responsive-enabled {
+    width: 100%;
   }
 }
 

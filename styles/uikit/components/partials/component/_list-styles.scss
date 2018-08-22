@@ -21,20 +21,6 @@ ul {
 }
 
 
-// Remove bullets.
-.no-bullets {
-  li {
-    list-style: none;
-  }
-}
-
-
-// Remove padding.
-.no-padding {
-  padding: 0;
-}
-
-
 // Item lists are frequently used in Drupal by Views and other modules that need
 // to output a list of something, sometimes with a title.
 .item-list {
@@ -52,9 +38,6 @@ ul {
   }
 
   a {
-    @include output-rhythm(padding, $menu-item-padding 0);
-    @include output-rhythm(margin, $menu-item-margin 0);
-
     &:hover,
     &:focus {}
   }

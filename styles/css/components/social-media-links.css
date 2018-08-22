@@ -23,17 +23,18 @@
 
 .block-social-media-links .is-horizontal,
 .pane-social-media-link-widget .is-horizontal {
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .block-social-media-links .is-horizontal .platform,
 .pane-social-media-link-widget .is-horizontal .platform {
-  margin: 0.625rem 0.0625rem 0.625rem 0.0625rem;
+  margin: 0 0.0625rem 0 0.0625rem;
   list-style: none;
 }
 
@@ -105,25 +106,30 @@
 .block-social-media-links .fa-lg + .platform__name,
 .pane-social-media-link-widget .fa-lg + .platform__name {
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .block-social-media-links .fa-2x + .platform__name,
 .pane-social-media-link-widget .fa-2x + .platform__name {
   font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .block-social-media-links .fa-3x + .platform__name,
 .pane-social-media-link-widget .fa-3x + .platform__name {
   font-size: 1.625rem;
+  line-height: 2.25rem;
 }
 
 .block-social-media-links .fa-4x + .platform__name,
 .pane-social-media-link-widget .fa-4x + .platform__name {
   font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 .block-social-media-links .fa-5x + .platform__name,
 .pane-social-media-link-widget .fa-5x + .platform__name {
   font-size: 2.625rem;
+  line-height: 3rem;
 }
 /*# sourceMappingURL=social-media-links.css.map */

@@ -13,17 +13,20 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
+  top: 0.25rem;
 }
 
-.ms-slidedown .rm-block__content a {
+.ms-slidedown .rm-block__content .menu__link {
   margin-bottom: 0.25rem;
   padding: 0.5rem;
   position: relative;
   display: block;
 }
 
-.ms-slidedown .rm-block__content a:after {
+.ms-slidedown .rm-block__content .menu__link:after {
   content: none;
   display: none;
 }
@@ -32,7 +35,9 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
 .ms-slidedown .rm-block__content .is-child.is-open--child {
@@ -49,10 +54,10 @@
   position: relative;
   visibility: visible;
   opacity: 1;
-  padding: 0 0 0.5rem;
+  padding: 0;
 }
 
-.ms-slidedown a:after {
+.ms-slidedown .menu__link:after {
   display: none !important;
 }
 /*# sourceMappingURL=responsive-menus--slidedown.css.map */

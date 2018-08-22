@@ -25,4 +25,3 @@ grunt watch:layout_plugin
 
 
 Now edit some SCSS files in the UIKit, and remember to turn off CSS aggregation in Drupal.
-

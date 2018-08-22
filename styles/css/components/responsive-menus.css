@@ -26,11 +26,8 @@
  *  2. jQuery: at.responsiveMenus.js which adds/toggles classes etc.
  *  3. Theme settings as set in your themes extension settings.
  ============================================================================ */
-.rm-row {
-  z-index: 100;
-}
-
 .rm-region {
+  padding: 0;
   margin: 0;
 }
 
@@ -49,9 +46,19 @@
   font: 0/0 a;
 }
 
+.rm-region [class*='is-vertical-'] {
+  position: absolute;
+  z-index: 480;
+}
+
+.ms-vertical .rm-toggle {
+  display: none;
+}
+
 .rm-toggle {
   font-size: 1rem;
-  padding: 0.3125rem 0;
+  line-height: 1.5rem;
+  padding: 0;
   margin: 0;
 }
 
@@ -59,9 +66,8 @@
 .rm-toggle__link:hover,
 .rm-toggle__link:focus,
 .rm-toggle__link:active {
-  padding: 0.5rem 1rem 0.25rem 0.75rem;
-  height: auto;
-  border-radius: 2px;
+  padding: 0.75rem 1rem 0.5rem;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -76,24 +82,6 @@
   position: relative;
 }
 
-.rm-block {
-  line-height: 1;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.rm-block__inner {
-  width: 100%;
-}
-
 .rm-block__content .menu {
   position: relative;
 }
@@ -105,26 +93,34 @@
 
 .rm-block__content__item {
   position: relative;
+  vertical-align: middle;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-.rm-block__content__item:first-child a {
+.rm-block__content__item:first-child .menu__link {
   border-top: 0;
 }
 
-.rm-block__content a {
-  transition: all, 225ms, ease-in-out;
+.rm-block__content .menu__link--wrapper {
+  width: 100%;
+}
+
+.rm-block__content .menu__link {
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
   font-weight: 300;
   margin: 0;
   border: 0;
 }
 
-.rm-block__content a:hover,
-.rm-block__content a:focus {
+.rm-block__content .menu__link:hover,
+.rm-block__content .menu__link:focus {
   text-decoration: none;
 }
 
-.no-js .rm-block a {
+.no-js .rm-block .menu__link {
   padding: 0.5rem;
   margin: 0.0625rem 0;
 }

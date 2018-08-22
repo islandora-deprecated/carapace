@@ -11,9 +11,9 @@
   // Global style reset.
   * {
     background: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    //color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none;
+    text-shadow: none;
+    color: #000; /* Black prints faster: h5bp.com/s */
   }
 
 
@@ -27,14 +27,6 @@
     width: 100% !important;
     padding: 0;
     margin: 0;
-  }
-
-
-  // Correct toolbar body padding etc.
-  body {
-    top: 0;
-    padding: 0 !important;
-    margin: 0 !important;
   }
 
 
@@ -53,13 +45,13 @@
   .l-r--page-top,
   .l-r--page-bottom,
   .pr-temporary-tabs,
+  // Remove other elements.
+  .node__footer,
   .comment-form-wrapper,
-  .block-breadcrumbs,
   .links,
   .contextual,
   .tabs,
-  .feed-icons,
-  .messages {
+  .feed-icons {
     display: none !important;
     width: 0;
     height: 0;
@@ -101,17 +93,6 @@
   }
 
 
-  // Reset margins.
-  .block,
-  .node,
-  .comment,
-  .page__row,
-  .regions,
-  .region {
-    margin: 0 0 12px;
-  }
-
-
   // Reset padding on menu links.
   .menu a {
     @include output-rhythm(padding, 0 $medium $xx-small 0);  // LTR
@@ -126,25 +107,6 @@
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
-  }
-
-
-  // Remove borders.
-  body,
-  img,
-  caption,
-  .page,
-  .field,
-  .block,
-  .comment,
-  .node,
-  .view,
-  .page__row,
-  .regions,
-  .region {
-    border: 0 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
   }
 
 
@@ -194,6 +156,9 @@
     page-break-after: avoid;
   }
 }
+
+
+
 
 
 

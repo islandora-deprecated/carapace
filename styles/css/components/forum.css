@@ -35,7 +35,7 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 45em) {
+@media all and (max-width: 45em) {
   .forum [class*="__last-reply"],
   .forum [class*="__Last-reply"] {
     display: none;
@@ -51,6 +51,7 @@
 .forum-list__description {
   overflow: hidden;
   font-size: 0.8rem;
+  line-height: 1.5rem;
   margin: 0.5rem 0.5rem 0.5rem 2.0625rem;
 }
 
@@ -68,6 +69,7 @@
 
 .forum__title .submitted {
   font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 .forum-list__replies-link {

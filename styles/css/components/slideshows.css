@@ -90,11 +90,18 @@ html[xmlns] .flexslider .slides {
 
 .flex-viewport {
   max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .loading .flex-viewport {
   max-height: 300px;
+}
+
+.flex-viewport img[class*="align-"],
+.flex-viewport .field-type-image__figure[class*="align-"] {
+  clear: none;
 }
 
 .flex-caption {
@@ -113,7 +120,7 @@ html[xmlns] .flexslider .slides {
   backface-visibility: hidden;
 }
 
-@media screen and (max-width: 45em) {
+@media all and (max-width: 45em) {
   .flex-caption {
     display: none;
   }
@@ -134,6 +141,8 @@ html[xmlns] .flexslider .slides {
   position: absolute;
   cursor: pointer;
   opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -169,7 +178,7 @@ html[xmlns] .flexslider .slides {
   left: -50px;
 }
 
-@media screen and (max-width: 60em) {
+@media all and (max-width: 60em) {
   .flex-direction-nav .flex-prev {
     opacity: 0.7;
     left: 10px;
@@ -189,7 +198,7 @@ html[xmlns] .flexslider .slides {
   content: "\232a";
 }
 
-@media screen and (max-width: 60em) {
+@media all and (max-width: 60em) {
   .flex-direction-nav .flex-next {
     opacity: 0.7;
     right: 10px;
@@ -241,6 +250,7 @@ html[xmlns] .flexslider .slides {
   background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-indent: -9999px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
@@ -272,6 +282,8 @@ html[xmlns] .flexslider .slides {
   display: block;
   opacity: .7;
   cursor: pointer;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 

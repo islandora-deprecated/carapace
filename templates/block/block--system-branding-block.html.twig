@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{%-
+  set classes = [
+    'block',
+    'block-branding',
+    'block-config-provider--' ~ configuration.provider|clean_class,
+    'block-plugin-id--' ~ plugin_id_clean|clean_class,
+    label ? 'has-title',
+  ]
+-%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="block__inner block-branding__inner">
+
+    {{ title_prefix }}
+    {%- if label -%}
+      <h2{{ title_attributes.addClass('block__title') }}><span>{{- label -}}</span></h2>
+    {%- endif -%}
+    {{ title_suffix }}
+
+    {%- block content -%}
+      <div{{ content_attributes.addClass('block__content', 'block-branding__content', 'site-branding') }}>
+        {%- if site_logo -%}
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" itemprop="url" rel="home" class="site-branding__logo-link"><img src="{{ site_logo }}" alt="{{ 'Home'|t }}" itemprop="logo" class="site-branding__logo-img" /></a>
+        {%- endif -%}
+        {%- if site_name or site_slogan -%}
+          <span class="site-branding__text">
+
+            {%- if site_name -%}
+              <strong class="site-branding__name">
+                <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" itemprop="url" rel="home" class="site-branding__name-link">
+
+                  {# Use twig to split and format the site name words #}
+                  {% set site_name_words = site_name|split(' ') %}
+                  {% set counter = 0 %}
+                  {% for word in site_name_words %}
+                    {% set counter = counter + 1 %}
+                    <span class="site-branding__name__word-count--{{ counter }} site-branding__name__word--{{ word|clean_class }}">{{ word }}</span>
+                  {% endfor %}
+
+                </a>
+              </strong>
+            {%- endif -%}
+
+            {%- if site_slogan -%}
+              <em class="site-branding__slogan">{{ site_slogan }}</em>
+            {%- endif -%}
+          </span>
+        {%- endif -%}
+      </div>
+    {%- endblock -%}
+
+  </div>
+</div>

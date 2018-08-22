@@ -8,13 +8,16 @@
  ============================================================================ */
 
 .node {
+  @include cfm;
+
   //border: $node-teaser-border-color $node-teaser-border-width;
-  margin-bottom: 1.25em;
-  padding: 1.25em;
+
+  // Test card design by default
+  //@include output-rhythm(margin-bottom, $medium);
+  //@include output-rhythm(padding, $medium 0);
   border-radius: $border-radius;
 
-
-  p:last-child {
+  p:last-of-type {
     margin-bottom: 0;
   }
 
@@ -26,7 +29,10 @@
 
   // Header - includes title (h1 full, h2 teaser), user picture, author and date.
   &__header {}
-  &__title {}
+  &__title,
+  .field-node--node-title {
+    @include adjust-font-size-to($x-large)
+  }
 
 
   // View modes
@@ -39,8 +45,16 @@
   }
 
   &--view-mode-teaser {
-    ul:last-of-type {
-      margin-bottom: 0;
+    [class*="field-type-text"] {
+      @include adjust-font-size-to($medium * 0.857);
+      @include adjust-leading-to(0.9);
+    }
+
+    .node-readmore {
+      a {}
+    }
+    .comment-add {
+      a {}
     }
   }
 
@@ -50,15 +64,17 @@
 
   // Node author picture, name and date details.
   &__meta {
-    display: flex;
-    align-items: center;
     @include output-rhythm(margin, $medium 0);
+    @include cf;
 
     // Author picture is showing.
-    &--has-author-picture {}
+    &--has-author-picture {
+      //@include output-rhythm(line-height, 48px);
+    }
 
     // User picture.
     .field-type-image {
+      float: #{$flow-from};
       @include output-rhythm(margin, 0 $small 0 0);
 
       // figure wraper
@@ -82,6 +98,8 @@
 
   // Node submitted, typically "Submitted by... on..."
   &__submitted {
+    @include adjust-font-size-to($medium * 0.857);
+
     // User name
     .field--name-uid {}
 
@@ -98,10 +116,6 @@
   .node__pubdate {}
 
   &__meta--has-author-picture {
-    .node__submitted {
-      @include output-rhythm(margin-top, 4px);
-    }
-
     .node__author {
       &:after {
         display: none;
@@ -133,12 +147,11 @@
   &__links {
     clear: both;
 
-    .inline {
-      li {
-        &.node-readmore {}
-        &.comment-new-comment {}
-        &.comment-forbidden {}
-      }
+    ul.links.inline a {
+      @include output-rhythm(padding, $xxxx-small $xx-small);
+      border-radius: $border-radius;
+      @include adjust-font-size-to($medium * 0.857);
+      vertical-align: middle; // counter the vertical bottom needed to render fonts correctly with our fancy hovers.
     }
   }
 
@@ -156,16 +169,90 @@
     padding: 0;
   }
 
+  // fields
+  // Node content.
   // Field image borders.
   .field-type-image__item {
     //border: $border-width $border-style;
     //border-radius: $border-radius;
     //@include output-rhythm(padding, $small);
-    //display: inline-block;
+    display: inline-block;
   }
 
   .field-type-image__figcaption {
-    //@include output-rhythm(padding, $small  0 0 0);
+    @include output-rhythm(padding, $small  0 0 0);
+  }
+
+  .field[class*="user-picture"] .field-type-image__item {
+    border: 0 none;
+    padding: 0;
+    border-radius: 0;
   }
 }
+
+
+
+/* View Modes to support nodes in views and other lists. */
+
+.node--view-mode-teaser {
+  border-bottom: $border-width $border-style;
+
+  @include output-rhythm(margin-bottom, $large);
+  @include output-rhythm(padding-bottom, $small);
+}
+
+
+
+.node--view-mode-hero,
+.node--view-mode-spotlight {
+  position: relative;
+
+  .field-type-image__figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  .field-name-node-title {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    margin: 0.625rem;
+    color: #fff;
+    bottom: 0;
+    padding: 0.3rem 0.625rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

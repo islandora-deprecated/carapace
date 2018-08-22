@@ -1,10 +1,10 @@
 name: Carapace
 type: theme
 'base theme': at_core
-'base theme original': 8.x-2.0
+'base theme original': 8.x-3.1
 'subtheme type': adaptive_subtheme
-layout: flex-builder
-description: 'A theme designed to enhance the user experience for Islandora CLAW. <br>Base: at_core (8.x-2.0) <br>Generated: Wed 31st, May, 2017 - 17:31'
+layout: page-layout
+description: 'An AdaptiveTheme sub-theme customized to optimize the Islandora experience. <br>Base: at_core (8.x-3.1)'
 core: 8.x
 regions:
   leaderboard: Leaderboard
@@ -24,10 +24,12 @@ regions:
   subfeatures_second: 'Sub-features second'
   subfeatures_third: 'Sub-features third'
   subfeatures_fourth: 'Sub-features fourth'
-  footer: Footer
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-tags: 'adaptivetheme sub-theme'
+tags: sub-theme
 libraries-extend:
   quickedit/quickedit:
     - carapace/quickedit

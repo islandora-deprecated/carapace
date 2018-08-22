@@ -17,7 +17,7 @@
 .field__label {
   font-family: inherit;
   font-weight: $font-weight-semibold;
-  @include output-rhythm(font-size, $medium);
+  @include adjust-font-size-to($medium);
   margin: 0;
 }
 
@@ -28,7 +28,7 @@
   .field__label {
     margin: 0;
     display: inline-block;
-    @include output-rhythm(padding, 0 $xxx-small 0 0); // LTR
+    @include output-rhythm(padding, 0 $xxxx-small 0 0); // LTR
 
     &:after {
       content: ":";
@@ -36,7 +36,7 @@
 
     // RTL
     [dir="rtl"] & {
-      @include output-rhythm(padding, 0 0 0 $xxx-small);
+      @include output-rhythm(padding, 0 0 0 $xxxx-small);
     }
   }
 

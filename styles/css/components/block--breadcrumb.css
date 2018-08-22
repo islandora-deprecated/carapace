@@ -11,7 +11,8 @@
 }
 
 .breadcrumb {
-  margin: 1.25em 0;
+  margin: 1.25rem 0;
+  overflow: hidden;
 }
 
 .breadcrumb__title {
@@ -99,17 +100,13 @@
   display: none;
 }
 
-.is-horizontal .breadcrumb__link {
-  display: inline-block;
-}
-
-@media screen and (max-width: 60em) {
+@media all and (max-width: 60em) {
   .no-js .breadcrumb__list-item:first-child:before {
     content: "";
   }
 }
 
-@media screen and (min-width: 60.0625em) {
+@media all and (min-width: 60.063em) {
   .no-js .breadcrumb__title,
   .no-js .breadcrumb__list,
   .no-js .breadcrumb__list-item {

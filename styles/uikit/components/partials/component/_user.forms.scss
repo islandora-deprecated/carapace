@@ -16,6 +16,16 @@
 
   .form-actions {}
   .form-submit {}
+
+  // User login block links
+  + .item-list {
+    .item-list__list {
+      padding: 0;
+    }
+    .item-list__item {
+      list-style: none;
+    }
+  }
 }
 
 

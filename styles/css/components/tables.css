@@ -11,6 +11,7 @@ table {
 
 table caption {
   font-size: 0.875rem;
+  line-height: 1.5rem;
   font-style: italic;
 }
 
@@ -56,6 +57,7 @@ table .view-table__details {
   padding: 0;
   margin: 0 0 1rem;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 table .view-table__details,
@@ -79,12 +81,16 @@ table[align='left'] {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 45em) {
+@media all and (max-width: 45em) {
   table[align='right'],
   table[align='left'] {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+table.responsive-enabled {
+  width: 100%;
 }
 
 thead,

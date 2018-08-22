@@ -5,27 +5,12 @@
  ============================================================================ */
 
 .comment {
-  @include output-rhythm(padding, $medium 0);
+  @include cfm;
+  @include output-rhythm(padding-top, $medium);
   border-top: $border-width $border-style;
 
   // Title and New
-  &__title {
-    &--visually-hidden {
-      margin: 0;
-      padding: 0;
-      @include output-rhythm(font-size, $medium);
-
-      .permalink {
-        @include visually-hidden;
-      }
-
-      .marker {
-        float: $flow-to;
-        @include output-rhythm(margin-#{$flow-from}, 4px);
-      }
-    }
-  }
-
+  &__title {}
   &__new {}
 
   p:last-of-type {
@@ -34,13 +19,14 @@
 
   // Comment author picture, name and date details.
   &__meta {
-    display: flex;
-    align-items: center;
-    @include output-rhythm(margin, $medium 0);
+    @include output-rhythm(margin, 0 0 $medium 0);
+    @include cf;
+    // @include adjust-font-size-to($medium * 0.75);
 
     .comment.has-title & {
       @include output-rhythm(margin, $medium 0);
     }
+
 
     .comment__author {
       &:after {

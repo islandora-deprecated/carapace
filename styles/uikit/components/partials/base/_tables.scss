@@ -9,7 +9,7 @@ table {
   border-collapse: collapse;
 
   caption {
-    @include output-rhythm(font-size, $medium * .875); // 14px
+    @include adjust-font-size-to($medium * .875); // 14px
     font-style: italic;
   }
 }

@@ -1,4 +1,71 @@
 /**
  * Shortcodes (Patterns)
  ============================================================================ */
+.pattern-1 {
+  background-image: url(../images/patterns/pattern-1.png);
+}
+
+.pattern-2 {
+  background-image: url(../images/patterns/pattern-2.png);
+}
+
+.pattern-3 {
+  background-image: url(../images/patterns/pattern-3.png);
+}
+
+.pattern-4 {
+  background-image: url(../images/patterns/pattern-4.png);
+}
+
+.pattern-5 {
+  background-image: url(../images/patterns/pattern-5.png);
+}
+
+.pattern-6 {
+  background-image: url(../images/patterns/pattern-6.png);
+}
+
+.pattern-7 {
+  background-image: url(../images/patterns/pattern-7.png);
+}
+
+.pattern-8 {
+  background-image: url(../images/patterns/pattern-8.png);
+}
+
+.pattern-9 {
+  background-image: url(../images/patterns/pattern-9.png);
+}
+
+.pattern-10 {
+  background-image: url(../images/patterns/pattern-10.png);
+}
+
+.pattern-11 {
+  background-image: url(../images/patterns/pattern-11.png);
+}
+
+.pattern-12 {
+  background-image: url(../images/patterns/pattern-12.png);
+}
+
+.pattern-13 {
+  background-image: url(../images/patterns/pattern-13.png);
+}
+
+.pattern-14 {
+  background-image: url(../images/patterns/pattern-14.png);
+}
+
+.pattern-15 {
+  background-image: url(../images/patterns/pattern-15.png);
+}
+
+.pattern-16 {
+  background-image: url(../images/patterns/pattern-16.png);
+}
+
+.block[class*="pattern-"] {
+  padding: 1rem;
+}
 /*# sourceMappingURL=shortcodes--patterns.css.map */

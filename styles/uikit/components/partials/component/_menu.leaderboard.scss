@@ -6,23 +6,25 @@
 .pr-leaderboard {
 
   .block-menu {
-    margin: 0;
+    @include cfm;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-    .menu-level-1 {
-      @include list-horizontal($flow-from, $margin: (t: $xxx-small, r: $medium, b: $xxx-small, l: 0), $list-item-selector: '.menu__item');
+  /* Mixin */
+  .menu {
+    @include list-horizontal($flow-from, $margin: (t: 0, r: $small, b: 0, l: 0), $list-item-selector: '.menu__item');
+  }
+
+  .block__content .menu__link {
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 
-  &.rm-row {
-    .block-menu {
-      float: #{$flow-to};
-    }
-  }
-
-  .menu a:after {
-    content: none;
+  .block__content .menu__link:after {
     display: none;
   }
 }
-
 

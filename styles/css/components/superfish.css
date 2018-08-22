@@ -123,6 +123,7 @@ div.sf-accordion-toggle.sf-style-none > a:after {
   content: "≡";
   position: absolute;
   font-size: 2rem;
+  line-height: 2.25rem;
   right: 0.75rem;
   top: 42%;
   -webkit-transform: translateY(-50%);

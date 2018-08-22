@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - carapace
+id: socialmedialinks
+theme: carapace
+region: leaderboard
+weight: -11
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    contact:
+      value: contact
+      weight: '-10'
+    drupal:
+      value: 'jeff-burnz'
+      weight: '-9'
+    email:
+      value: ''
+      weight: '-8'
+    facebook:
+      value: ''
+      weight: '-7'
+    googleplus:
+      value: ''
+      weight: '-6'
+    instagram:
+      value: ''
+      weight: '-5'
+    linkedin:
+      value: ''
+      weight: '-4'
+    pinterest:
+      value: ''
+      weight: '-3'
+    rss:
+      value: ''
+      weight: '-2'
+    slideshare:
+      value: ''
+      weight: '-1'
+    tumblr:
+      value: ''
+      weight: '0'
+    twitter:
+      value: adaptivethemes
+      weight: '1'
+    vimeo:
+      value: ''
+      weight: '2'
+    youtube:
+      value: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:lg'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

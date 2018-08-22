@@ -27,7 +27,7 @@
 // The Views mini-pager, e.g. used by default for taxonomy term page views.
 .pager--mini {
   .pager__link--is-active {
-    @include output-rhythm(font-size, $medium * 0.875); // 14px
+    @include adjust-font-size-to($medium * 0.875); // 14px
   }
 }
 
@@ -46,7 +46,7 @@
 }
 
 
-@media #{$mobile-isolate} {
+@media #{$mobile} {
   .pager__items__first-previous,
   .pager__items__num-pages,
   .pager__items__next-last {
@@ -61,13 +61,7 @@
 }
 
 
-@media #{$tablet} {
-  .pager__items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+@media #{$wide} {
   .pager__items__first-previous,
   .pager__items__num-pages,
   .pager__items__next-last {
@@ -75,14 +69,14 @@
   }
 
   .pager__items__num-pages {
-    //text-align: center;
+    text-align: center;
   }
 
   .pager__items__first-previous {
-    text-align: #{$flow-from};
+    float: #{$flow-from};
   }
   .pager__items__next-last {
-    text-align: #{$flow-to};
+    float: #{$flow-to};
   }
 }
 

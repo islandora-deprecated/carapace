@@ -10,9 +10,8 @@
 
 .site-branding {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: $row-direction;
+  flex-wrap: wrap;
+  align-items: baseline;
 
   &__text,
   &__name,
@@ -32,22 +31,29 @@
   // wrapper around site name and slogan (byline)
   &__text {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: $row-direction;
+    flex-wrap: wrap;
+    align-items: baseline;
     margin: 0;
   }
 
   // site name
   &__name {
-    @include output-rhythm(font-size, $large);
+    @include output-rhythm(font-size, $medium * 1.5);
 
     @media #{$wide} {
-      @include output-rhythm(font-size, $x-large);
+      @include output-rhythm(font-size, $medium * 2);
     }
 
     @include output-rhythm(padding-#{$flow-to}, $medium);
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
+
+    &__word-count--1 {}
+    &__word-count--2 {}
+
+    // The word AT, as in teh default.
+    &__word--at {
+      margin-#{$flow-to}: -0.2em;
+    }
   }
 
   // site name link
@@ -61,7 +67,7 @@
   // site slogan
   &__slogan {
     //@include output-rhythm(padding, $xxx-small 0);
-    font-weight: $font-weight-normal;
+    font-style: $font-weight-normal;
   }
 }
 

@@ -9,6 +9,7 @@
   display: block;
   clear: both;
   position: relative;
+  margin: 0;
 
  .form-type-search,
  .form-actions {
@@ -22,7 +23,7 @@
 
   // The submit button is not hidden.
   .submit-is-visible & .form-search {
-    @include output-rhythm(padding-#{$flow-to}, $form_input_button_select_height);
+    @include output-rhythm(padding-#{$flow-to}, 35px);
   }
 
   .form-actions {
@@ -35,10 +36,9 @@
   // Search block input submit text removed, uses an SVG
   // icon instead.
   .form-submit {
-    display: inline-flex;
     margin: 0;
     padding: 0;
-    @include output-rhythm(width, $form_input_button_select_height);
+    @include output-rhythm(width, 32px);
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -50,7 +50,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 0 $border-radius $border-radius 0; // LTR
-    background-size: contain;
   }
 
   // The contextual links trigger can obscure the search submit input.
@@ -125,7 +124,7 @@
 
 .search-help-link {
   float: $flow-to;
-  @include output-rhythm(font-size, $medium*.875);  // 14px
+  @include adjust-font-size-to($medium*.875);  // 14px
   @include output-rhythm(margin-top, -24px);
   @include output-rhythm(padding-#{$flow-to}, $xxx-small);
 

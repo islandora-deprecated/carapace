@@ -65,49 +65,37 @@ fieldset {
 
 
 // Headings.
-// TODO media queries for heading font sizes and line heights.
-h1, h2, h3, h4, h5, h6 {
+#{headings(all)} {
   @include output-rhythm(margin, 0 0 $medium);
-  line-height: 1.125;
 }
 
-h1, h2, h3, h5 {
+
+#{headings(1,4)} {}
+
+
+#{headings(1,3)} {
   font-weight: $font-weight-normal;
 }
 
-h4, h6 {
+
+#{headings(4,6)} {
   font-weight: $font-weight-semibold;
 }
 
-// Mobile Heading Sizes
-h1, .h1 {@include output-rhythm(font-size, $xx-large)}
-h2, .h2 {@include output-rhythm(font-size, $x-large)}
-h3, .h3 {@include output-rhythm(font-size, $large)}
-h4, .h4,
-h5, .h5 {@include output-rhythm(font-size, $medium)}
-h6, .h6 {@include output-rhythm(font-size, $small)}
+
+h1, .h1 {@include adjust-font-size-to($xxx-large)}
+h2, .h2 {@include adjust-font-size-to($xx-large)}
+h3, .h3 {@include adjust-font-size-to($x-large)}
+h4, .h4 {@include adjust-font-size-to($large)}
+h5, .h5 {@include adjust-font-size-to($medium)}
+h6, .h6 {@include adjust-font-size-to($small)}
+
 
 // Using the small element to control font size, an idea lifted from Bootstrap.
-h1 small, .h1 small {@include output-rhythm(font-size, $x-large)}
-h2 small, .h2 small {@include output-rhythm(font-size, $large)}
+h1 small, .h1 small {@include adjust-font-size-to($x-large)}
+h2 small, .h2 small {@include adjust-font-size-to($large)}
 h3 small, .h3 small,
-h4 small, .h4 small {@include output-rhythm(font-size, $medium)}
-
-// Wide Heading Sizes
-@media #{$wide} {
-  h1, .h1 {@include output-rhythm(font-size, $xxx-large)}
-  h2, .h2 {@include output-rhythm(font-size, $xx-large)}
-  h3, .h3 {@include output-rhythm(font-size, $x-large)}
-  h4, .h4,
-  h5, .h5 {@include output-rhythm(font-size, $large)}
-  h6, .h6 {@include output-rhythm(font-size, $medium)}
-
-  // Using the small element to control font size, an idea lifted from Bootstrap.
-  h1 small, .h1 small {@include output-rhythm(font-size, $xx-large)}
-  h2 small, .h2 small {@include output-rhythm(font-size, $x-large)}
-  h3 small, .h3 small {@include output-rhythm(font-size, $large)}
-  h4 small, .h4 small {@include output-rhythm(font-size, $medium)}
-}
+h4 small, .h4 small {@include adjust-font-size-to($medium)}
 
 
 // Paragraph.
@@ -118,9 +106,6 @@ p {
   }
 }
 
-small {
-  @include output-rhythm(font-size, $small);
-}
 
 // Media.
 img {
@@ -141,11 +126,8 @@ video {
 
 // Video element gets width 100%, slightly dangerous.
 video {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  overflow: hidden;
+  width: 100% !important;
+  height: auto !important;
 }
 
 
@@ -179,6 +161,7 @@ figcaption {
 }
 
 
+
 // Links.
 a {
   text-decoration: none;
@@ -195,7 +178,7 @@ a {
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   img {
@@ -246,10 +229,7 @@ blockquote {
   }
 
   p {
-    @media #{$wide} {
-      @include output-rhythm(font-size, $large);
-    }
-
+    @include adjust-font-size-to($large);
     font-weight: $font-weight-light;
 
     &:first-child {
@@ -276,13 +256,14 @@ blockquote {
       }
     }
 
-    &:last-of-type {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
   small {
     display: block;
+    @include adjust-font-size-to($medium * 0.875);
 
     &:before {
       content: '\2014 \00A0'; // EM DASH, NBSP
@@ -310,6 +291,10 @@ blockquote {
       }
     }
   }
+
+  .pr-footer & {
+    margin-#{$flow-from}: $global-padding;
+  }
 }
 
 
@@ -323,29 +308,19 @@ hr {
 }
 
 
-// Del is strike-through text and supported by the CKEditor.
-del {}
-
-
-// Code related elements.
-code,
-pre,
-var,
-kbd,
-samp {
-  font-family: $monospace;
-  overflow-x: auto;
-}
-
 pre {
-  @include output-rhythm(padding, $medium);
+  white-space: pre-wrap;
+
+  code {
+    display: block;
+  }
 }
 
 
-// Polyfill hidden for IE8/9/10, hide Firefox template element.
-[hidden],
-template {
-  display: none !important;
+// Set hidden styles for non-supporting browsers.
+[hidden] {
+  display: none;
 }
+
 
 

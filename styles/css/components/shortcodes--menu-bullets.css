@@ -14,7 +14,7 @@
   content: "";
 }
 
-.fa-arrow .menu li.menu__item--expanded > a:after {
+.fa-arrow .menu li.menu__item > a:after.--expanded > a:after {
   content: "";
 }
 
@@ -34,7 +34,7 @@
   content: "";
 }
 
-.fa-caret .menu li.menu__item--expanded > a:after {
+.fa-caret .menu li.menu__item > a:after.--expanded > a:after {
   content: "";
 }
 
@@ -54,7 +54,7 @@
   content: "";
 }
 
-.fa-angle-double .menu li.menu__item--expanded > a:after {
+.fa-angle-double .menu li.menu__item > a:after.--expanded > a:after {
   content: "";
 }
 
@@ -74,7 +74,7 @@
   content: "";
 }
 
-.fa-chevron .menu li.menu__item--expanded > a:after {
+.fa-chevron .menu li.menu__item > a:after.--expanded > a:after {
   content: "";
 }
 

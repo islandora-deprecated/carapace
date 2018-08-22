@@ -9,11 +9,12 @@
 // Node
 .field-node--node-title {}
 
-// Some node fields will likely share styles.
 .field-node--node-submitted-by,
 .field-node--node-author,
 .field-node--node-post-date,
-.field-node--node-changed-date {}
+.field-node--node-changed-date {
+  @include adjust-font-size-to($medium * 0.857);
+}
 
 .field-node--user {}
 .field-node--node-author {}
@@ -23,6 +24,12 @@
 .field-node--node-link {
   @include cfm;
   clear: both;
+
+  a {
+    @include output-rhythm(padding, $xxxx-small $xx-small);
+    border-radius: $border-radius;
+    @include adjust-font-size-to($medium * 0.857);
+  }
 
   @media #{$wide} {
     float: right;
@@ -40,12 +47,6 @@
 
 // Comment
 .field-comment--comment-title {}
-
-// Some comment fields will likely share styles.
-.field-comment--comment-author,
-.field-comment--comment-post-date,
-.field-comment--comment-changed-date {}
-
 .field-comment--comment-user {}
 .field-comment--comment-author {}
 .field-comment--comment-post-date {}
@@ -62,4 +63,7 @@
 
 // Labels
 .field-label-hidden {}
+
+
+
 

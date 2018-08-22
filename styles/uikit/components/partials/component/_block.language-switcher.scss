@@ -2,14 +2,10 @@
  * Block Language Switcher
  ============================================================================ */
 
-.language-switcher-language-url,
-.block-config-provider--language {
+.block-id--block-languageswitcher {
   .links {
-    a {
-      display: block;
-      @include output-rhythm(padding, $menu-item-padding 0);
-      @include output-rhythm(margin, $menu-item-margin 0);
-    }
+    list-style: none;
+    margin: 0;
+    padding:0;
   }
 }
-

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Custom Islandora theme.
+ * Functions to support theming in the Carapace theme.
  */
 
 use Drupal\Component\Utility\Xss;
@@ -56,7 +56,7 @@ function carapace_library_info_build() {
       // Google fonts.
       if (!empty($config['font_google'])) {
         $libraries['google_fonts'] = [
-          'remote' => 'https://fonts.google.com',
+          'remote' => 'https://www.google.com/fonts',
           'license' => [
             'name' => 'SIL (OFL)',
             'url' => 'http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL',
@@ -107,7 +107,7 @@ function carapace_page_attachments_alter(array &$page) {
   $theme = 'carapace';
 
   // Attach module dependant libraries.
-  // These libraries are declared in your STARTERKIT.libraries.yml and we only
+  // These libraries are declared in your themeName.libraries.yml and we only
   // load if the module is installed.
   $module_libraries = [
     'addtoany',
@@ -122,3 +122,51 @@ function carapace_page_attachments_alter(array &$page) {
     }
   }
 }
+
+/**
+ * Preprocess variables for html templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_html(&$variables) {
+}
+ */
+
+/**
+ * Preprocess variables for page templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_page(&$variables) {
+}
+ */
+
+/**
+ * Preprocess variables for field templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_field(&$variables) {
+}
+ */
+
+/**
+ * Preprocess variables for node templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_node(&$variables) {
+}
+ */
+
+/**
+ * Preprocess variables for comment templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_comment(&$variables) {
+}
+ */
+
+/**
+ * Preprocess variables for block templates.
+ */
+/* -- Delete this line if you want to use this function
+function carapace_preprocess_block(&$variables) {
+}
+ */

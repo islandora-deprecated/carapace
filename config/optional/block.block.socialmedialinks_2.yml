@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - carapace
+id: socialmedialinks_2
+theme: carapace
+region: leaderboard
+weight: -11
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    behance:
+      value: ''
+      description: ''
+      weight: '-10'
+    contact:
+      value: contact
+      description: ''
+      weight: '-10'
+    drupal:
+      value: jeff-burnz
+      description: ''
+      weight: '-9'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-9'
+    email:
+      value: ''
+      description: ''
+      weight: '-8'
+    github:
+      value: ''
+      description: ''
+      weight: '-8'
+    facebook:
+      value: ''
+      description: ''
+      weight: '-7'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-6'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-5'
+    linkedin:
+      value: pub/jeff-burnz/3/418/a47
+      description: ''
+      weight: '-4'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-3'
+    rss:
+      value: ''
+      description: ''
+      weight: '-2'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-1'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '0'
+    twitter:
+      value: adaptivethemes
+      description: ''
+      weight: '1'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '2'
+    youtube:
+      value: ''
+      description: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:in'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

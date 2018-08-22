@@ -3,51 +3,38 @@
  * - useful classes to be used anywhere.
  ============================================================================ */
 
-// FlexPosition styles. See at.flexPosition.js
-.is-flexposition-container {
-  display: flex;
-  flex-direction: $row-direction;
-  height: 100%;
-  width: 100%;
-}
-
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: $row-direction;
-  width: 100%;
-}
-
-
 .is-vertical-center {
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  filter: blur(0.1px);
+  backface-visibility: hidden;
 }
-
 
 .is-vertical-top {
-  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  bottom: auto;
 }
-
 
 .is-vertical-bottom {
-  align-items: flex-end;
+  position: absolute;
+  top: auto;
+  bottom: 0;
 }
-
 
 .is-horizontal-center {
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table;
 }
-
 
 .is-horizontal-left {
-  justify-content: flex-start;
+  left: 0;
+  right: auto;
 }
-
 
 .is-horizontal-right {
-  justify-content: flex-end;
+  left: auto;
+  right: 0;
 }
-
-
-

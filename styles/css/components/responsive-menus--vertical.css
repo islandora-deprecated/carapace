@@ -4,22 +4,18 @@
  * the slidedown, overlay and offcanvas toggle but without hiding the entire
  * menu also.
  ============================================================================ */
-.ms-vertical .rm-toggle {
-  display: none;
-}
-
 .ms-vertical .rm-block__content {
   margin-top: 0.25rem;
 }
 
-.ms-vertical .rm-block__content a {
+.ms-vertical .rm-block__content .menu__link {
   margin-bottom: 0.25rem;
   padding: 0.5rem;
   position: relative;
   display: block;
 }
 
-.ms-vertical .rm-block__content a:after {
+.ms-vertical .rm-block__content .menu__link:after {
   content: none;
   display: none;
 }
@@ -28,7 +24,9 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
 .ms-vertical .rm-block__content .is-child.is-open--child {

@@ -3,7 +3,9 @@
  * Toggle left or right menus that slide in.
  ============================================================================ */
 .ms-offcanvas > .page {
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
 .ms-offcanvas .rm-toggle {
@@ -22,16 +24,18 @@
   left: 0;
   -webkit-transform: translate3d(-15em, 0, 0);
   transform: translate3d(-15em, 0, 0);
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
-.ms-offcanvas .rm-block__content a {
+.ms-offcanvas .rm-block__content .menu__link {
   margin-bottom: 0.25rem;
   padding: 0.5rem 1.25rem;
   display: block;
 }
 
-.ms-offcanvas .rm-block__content a:after {
+.ms-offcanvas .rm-block__content .menu__link:after {
   content: none;
   display: none;
 }
@@ -40,7 +44,9 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  transition: all, 225ms, ease-in-out;
+  -webkit-transition: all, 0.2s, ease-in-out;
+  -o-transition: all, 0.2s, ease-in-out;
+  transition: all, 0.2s, ease-in-out;
 }
 
 .ms-offcanvas .rm-block__content .is-child.is-open--child {

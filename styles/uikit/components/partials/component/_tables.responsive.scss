@@ -24,7 +24,7 @@
   }
 
   &__message {
-    @include output-rhythm(font-size, $small);
+    @include adjust-font-size-to($small);
 
     em:after {
       font-family: $icon-font;
@@ -73,14 +73,11 @@ table {
   // Table theme extension enabled, have added the "responsive-enabled" class to
   // a table and the tables width overflows the viewport.
   &.has-overflow {}
-
-  // Drupal core includes a responsive tables feature, we're not using it by
-  // default but we can set some styles for core tables by targeting it's selector.
-  &.responsive-enabled {
-    width: 100%;
-  }
 }
 
 
-
-
+// Drupal core includes a responsive tables feature, we're not using it by
+// default but we can set some styles for core tables by targeting it's selector.
+.responsive-enabled {
+  width: 100%;
+}

@@ -8,7 +8,7 @@
 
 .ms-horizontal {
   .rm-block__content {
-    a {
+    .menu__link {
       @include output-rhythm(padding, $xx-small $large);
 
       &:before,

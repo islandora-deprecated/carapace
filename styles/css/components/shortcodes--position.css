@@ -16,21 +16,7 @@
   transform: translateY(-50%);
 }
 
-@media screen and (max-width: 60em) {
-  .pull-right,
-  [dir="rtl"] .pull-left,
-  .pull-left,
-  [dir="rtl"] .pull-right {
-    float: none;
-    right: auto;
-    left: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 60.0625em) {
+@media all and (min-width: 60.063em) {
   .pull-right,
   [dir="rtl"] .pull-left {
     float: right;
