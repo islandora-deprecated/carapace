@@ -36,7 +36,8 @@ Further documentation for this module is available on the [Islandora 8 documenta
 
 Having problems or solved a problem? Check out the Islandora google groups for a solution.
 
-* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora) * [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
+* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora) 
+* [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
 
 ## Maintainers/Sponsors
 
