@@ -1,4 +1,4 @@
-# ![Carapace](./screenshot.png)
+# ![Carapace](https://user-images.githubusercontent.com/2371345/65792037-4f388380-e139-11e9-83ae-501282063c6e.png)
 [![Build Status](https://travis-ci.com/Islandora-CLAW/Carapace.png?branch=8.x-1.x)](https://travis-ci.com/Islandora-CLAW/Carapace)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
