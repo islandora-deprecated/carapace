@@ -55,5 +55,5 @@ We recommend using the [claw-playbook](https://github.com/Islandora-Devops/claw-
 
 ## License
 
-[GPLv2](/LICENCSE)
+[GPLv2](/LICENSE)
 
