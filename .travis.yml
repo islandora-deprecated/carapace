@@ -1,9 +1,12 @@
 sudo: true
 language: php
 php:
-  - 7.1
   - 7.2
+  - 7.3
 
+services:
+  - mysql
+  
 matrix:
     fast_finish: true
 
@@ -27,7 +30,8 @@ install:
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
-  - phpcs --standard=Drupal --ignore='*.md,*-min.css' --extensions=php,module,inc,install,test,profile,theme,css,info $TRAVIS_BUILD_DIR
+  - phpcs --standard=Drupal --ignore='*.md,*-min.css,*.css' --extensions=php,module,inc,install,test,profile,theme,info $TRAVIS_BUILD_DIR
+  - phpcs --standard=Drupal $TRAVIS_BUILD_DIR/styles/css/custom.css
   - phpcpd --names *.module,*.inc,*.test,*.php $TRAVIS_BUILD_DIR
 
 notifications:
