@@ -3,9 +3,3 @@
  * Use this file to override styles if you feel uncomfortable editing
  * component stylesheets.
  ============================================================================ */
-/*
- * To fix header leaning left
- */
-.pr-leaderboard {
-  display: flex;
-}
