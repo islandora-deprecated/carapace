@@ -238,7 +238,7 @@ The `$includeClasses` / `@includeClasses` option by default is set to `true` and
 If you'd like to contribute your own effects, please see the [Contributing Guide](https://github.com/IanLunn/Hover/blob/master/CONTRIBUTING.md).
 
 ## License
-Hover.css is open source, and made available under a [MIT License](http://www.opensource.org/licenses/mit-license.php). Distribute, use as-is, or modify to your liking in personal and commercial projects. Please retain the original readme and license files.
+Hover.css is open source, and made available under a [MIT License](http://www.opensource.org/licenses/mit-license.php). Distribute, use as-is, or modify to your liking in personal and commercial projects. Please retain the original README and license files.
 
 Retaining the author information at the top of `css/hover.css` and placing it on your credits page or humans.txt is much appreciated.
 
