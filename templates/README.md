@@ -4,7 +4,7 @@ WARNING: do not change the directory structure - the layout generation system re
 
 Here you can place template overrides and suggestions. By default only page.html.twig is included, unless you choose to include all AT Cores template overrides during when generating a new sub-theme (or you copy them in manually).
 
-Note that all AT Core templates are used by this sub-theme due to Drupals template inheritance feature - sub-themes automatically use any template in the base theme, unless overridden in the sub-theme.
+Note that all AT Core templates are used by this sub-theme due to Drupal's template inheritance feature - sub-themes automatically use any template in the base theme, unless overridden in the sub-theme.
 
 SEE: at_core/templates/README.md for more information on AT Cores templates and the changes made compared to Drupal core.
 
@@ -14,7 +14,7 @@ SEE: at_core/templates/README.md for more information on AT Cores templates and 
 
 ### page.html.twig
 
-* In Adaptivetheme sub-themes page.html.twig is generated - this means it can be overwritten when saving the theme settings. A backup is always stored in your themes /backup/ directory. Backups are time stamped and never removed, so if you get a build up you can manaually clear them out.
+* In Adaptivetheme sub-themes page.html.twig is generated - this means it can be overwritten when saving the theme settings. A backup is always stored in your themes /backup/ directory. Backups are time stamped and never removed, so if you get a build up you can manually clear them out.
 
 ---
 
