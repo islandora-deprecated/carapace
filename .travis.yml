@@ -37,9 +37,7 @@ script:
   - phpcpd --names *.module,*.inc,*.test,*.php $TRAVIS_BUILD_DIR
 
 notifications:
-  irc:
-    channels:
-      - "irc.freenode.org#islandora"
+  slack:
     on_success: change
     on_failure: always
-    skip_join: true
+    secure: $SLACK_NOTIFICATION_KEY
