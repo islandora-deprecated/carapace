@@ -119,6 +119,12 @@
   display: inline-block;
 }
 
+/* Above makes Open Seadragon viewer very small. We undo
+*  that so it takes up the whole of the content area. */
+.field-formatter-openseadragon-image .field-type-image__item {
+  display: initial;
+}
+
 .node .field-type-image__figcaption {
   padding: 0.75rem 0 0 0;
 }
