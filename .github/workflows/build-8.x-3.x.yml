@@ -119,5 +119,5 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/build_dir
           ls -alh
-          phpcpd --name *.theme,*.module,*.inc,*.test,*.php .
+          phpcpd --suffix *.theme,*.module,*.inc,*.test,*.php .
 
