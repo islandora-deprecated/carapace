@@ -105,14 +105,10 @@ jobs:
           drush --uri=127.0.0.1:8282 fim -y islandora_core_feature,islandora_text_extraction_defaults
           drush --uri=127.0.0.1:8282 then -y carapace
 
-      # - name: Copy PHPunit file
-      # run: cp $PHPUNIT_FILE $DRUPAL_DIR/web/core/phpunit.xml
-
       - name: Test scripts
-        run: $SCRIPT_DIR/travis_scripts.sh
-
-     #- name: PHPUNIT tests
-     #   run: |
-     #    cd $DRUPAL_DIR/web/core
-     #    $DRUPAL_DIR/vendor/bin/phpunit --verbose --testsuite "${{ matrix.test-suite }}"
+        run: |
+          $SCRIPT_DIR/line_endings.sh $GITHUB_WORKSPACE/build_dir
+          phpcs --standard=Drupal --ignore=*.md,*-min.css,*.css --extensions=php,module,inc,install,test,profile,theme,css,info $GITHUB_WORKSPACE/build_dir
+          phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom/css
+          phpcpd --suffix *.module,*.inc,*.test,*.php $GITHUB_WORKSPACE/build_dir
 
