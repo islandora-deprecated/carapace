@@ -115,5 +115,6 @@ jobs:
           phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom.css
       - name: Test phpcpd
         run: |
-          $GITHUB_WORKSPACE/build_dir/travis_scripts.sh
+          cd $DRUPAL_DIR/web/themes/contrib/carapace
+          ./travis_scripts.sh
 
