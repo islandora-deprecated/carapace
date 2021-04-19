@@ -105,10 +105,17 @@ jobs:
           drush --uri=127.0.0.1:8282 fim -y islandora_core_feature,islandora_text_extraction_defaults
           drush --uri=127.0.0.1:8282 then -y carapace
 
-      - name: Test scripts
+      - name: Test line ending scripts
         run: |
           $SCRIPT_DIR/line_endings.sh $GITHUB_WORKSPACE/build_dir
+
+      - name: Test phpcs
+        run: |
           phpcs --standard=Drupal --ignore=*.md,*-min.css,*.css --extensions=php,module,inc,install,test,profile,theme,css,info $GITHUB_WORKSPACE/build_dir
+      - name: Test phpcs custom.css
+        run: |
           phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom.css
+      - name: Test phpcpd
+        run: |
           phpcpd --suffix *.module,*.inc,*.test,*.php $GITHUB_WORKSPACE/build_dir
 
