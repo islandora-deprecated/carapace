@@ -109,6 +109,6 @@ jobs:
         run: |
           $SCRIPT_DIR/line_endings.sh $GITHUB_WORKSPACE/build_dir
           phpcs --standard=Drupal --ignore=*.md,*-min.css,*.css --extensions=php,module,inc,install,test,profile,theme,css,info $GITHUB_WORKSPACE/build_dir
-          phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom/css
+          phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom.css
           phpcpd --suffix *.module,*.inc,*.test,*.php $GITHUB_WORKSPACE/build_dir
 
