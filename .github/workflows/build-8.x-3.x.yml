@@ -117,7 +117,7 @@ jobs:
           phpcs --standard=Drupal $GITHUB_WORKSPACE/build_dir/styles/css/custom.css
       - name: Test phpcpd
         run: |
-          $GITHUB_WORKSPACE/build_dir
+          cd $GITHUB_WORKSPACE/build_dir
           ls -alh
           phpcpd --suffix *.theme,*.module,*.inc,*.test,*.php .
 
