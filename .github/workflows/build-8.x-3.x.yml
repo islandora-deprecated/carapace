@@ -116,4 +116,5 @@ jobs:
       - name: Test phpcpd
         run: |
           phpcpd --suffix .theme,.module,.inc,.test,.php $GITHUB_WORKSPACE/build_dir
+          phpcpd --suffix .theme $GITHUB_WORKSPACE/build_dir
 
