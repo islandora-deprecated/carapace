@@ -95,7 +95,7 @@ jobs:
           cd $DRUPAL_DIR
           composer config repositories.local path "$GITHUB_WORKSPACE/build_dir"
           composer config minimum-stability dev
-          composer require "islandora/islandora:dev-travis-testing as dev-8.x-1.x"
+          composer require "islandora/islandora:dev-8.x-1.x" 
           composer require "islandora/carapace:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
 
       - name: Install modules
