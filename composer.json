@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "drupal/adaptivetheme": "dev-3.x"
+    "drupal/at_theme": "^1.4"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
