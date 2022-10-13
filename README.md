@@ -31,7 +31,7 @@ Having problems or solved a problem? Check out the Islandora google groups for a
 
 Current maintainers:
 
-* [Debbie Flitner](https://github.com/dflitner)
+* No current maintainers.
 
 ## Development
 
